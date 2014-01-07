@@ -7,21 +7,26 @@
    </head>
    
    <body>
-
       <nav id='main-navbar'>
          <ul>
             <a href='/projects'> <li> WORK +
 
                <ul id='projects-nav'>
-                  <li>ThingsJS</li>
-                  <li>Memory Shells</li>
-                  <li>LADE</li>
-                  <li>Rigby</li>
-                  <li>Lamba Labs</li>
+                  <% for (var i=0;i<projects.projects_overview.length;i++) { %>
+                  <a href='/projects/<%=projects.projects_overview[i].url%>'> <li> <%= projects.projects_overview[i].name %></li></a> 
+                  <% } %> 
                </ul>
 
             </li> </a>
-            <a href='/play'> <li> PLAY -</li> </a>
+            <a href='/play'> <li> PLAY -
+
+               <ul id='play-nav'>
+                  <% for (var i=0;i<projects.play_overview.length;i++) { %>
+                  <a href='/play/<%=projects.play_overview[i].url%>'> <li> <%= projects.play_overview[i].name %></li></a> 
+                  <% } %> 
+               </ul>
+
+            </li> </a>
             <li> BLOG </li>
             <a href='/about'> <li> ABOUT </li> </a>
          </ul>

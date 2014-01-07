@@ -11,7 +11,9 @@ exports.index = function(req, res){
  * GET projects page.
  */
 exports.projects = function(req, res){
-  res.render('projects');
+			projects = require('../models/projects');
+
+  res.render('projects', {'projects': projects});
 };
 
 /*

@@ -5,33 +5,33 @@
     <h1 id='title' > <%= title %> </h1>
 </div>
 
-<p id='tagline'>
-     <%= tagline %>
-</p>
+<div id='text'>
 
-<div id='summary'>
+	<div id='summary'>
 
-	<p> <b>Data</b> <%=summary.date%> </p>
-	<% if (summary.methods != undefined ) { %>
-		<p> <b>Method</b> 
-		<% for(var i=0;i<summary.methods.length;i++) { %>
-			 <p id='sub-sum'> <%=summary.methods[i]%> </p>
+		<p id='label'> DATE  </p>
+		<span><%=summary.date%> </span>
+		<br>
+		<% if (summary.methods != undefined ) { %>
+			<p id='label'> METHOD </p> 
+			<% for(var i=0;i<summary.methods.length;i++) { %>
+				 <p id='sub-sum'> <%=summary.methods[i]%> </p>
+			<% } %>
 		<% } %>
-	<% } %>
-	</p>
 
-	<% if (summary.technology != undefined ) { %>
-		<p> <b>Technology</b> 
-		<% for(var i=0;i<summary.technology.length;i++) { %> 
-			 <p id='sub-sum'> <%=summary.technology[i]%> </p>
+		<% if (summary.technology != undefined ) { %>
+			<p id='label'> TECHNOLOGY </p>
+			<% for(var i=0;i<summary.technology.length;i++) { %> 
+				 <p id='sub-sum'> <%=summary.technology[i]%> </p>
+			<% } %>
 		<% } %>
-		</p>
-	<% } %>
+	</div>
+
+	<div id='description'>
+	    <%= description %>
+	 </div>
+
 </div>
-
-<p>
-    <%= description %>
- </p>
 
 <div id='images'>
     <% for(var i=0; i<images.length; i++) {%>

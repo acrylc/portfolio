@@ -1,3 +1,26 @@
+exports.projects_overview = [
+
+	{'name':'Rigby', 'url':'rigby'},
+	{'name':'ThingsJS', 'url':'things'},
+	{'name':'Lebanon Election Data', 'url':'lade'},
+	{'name':'Lamba Labs', 'url':'lamba'}
+
+];
+
+exports.play_overview = [
+
+	{'name':'Grow', 'url':'rigby'},
+	{'name':'PicoSpaces', 'url':'things'},
+	{'name':'Hayda Ra2yna', 'url':'lade'},
+	{'name':'Whisker', 'url':'lamba'},	
+	{'name':'Flock', 'url':'rigby'},
+	{'name':'TicTag', 'url':'things'},
+	{'name':'Nour', 'url':'lade'},
+	{'name':'Poster', 'url':'lamba'},
+	{'name':'Pixelate Me', 'url':'lamba'},
+	{'name':'Generative Art Experiments', 'url':'lamba'}
+
+];
 
 exports.rigby = {
 

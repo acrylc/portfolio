@@ -12,8 +12,12 @@ body, html {
 }
 
 a {
-  color: #00B7FF;
+  color: black;
   text-decoration: none;
+  padding-bottom: 3px;
+  &:hover{
+  	border-bottom: 3px solid black;
+  }
 }
 
 p{
@@ -51,11 +55,14 @@ p{
 		}
 	}
 }
-#projects-nav{
+#projects-nav, #play-nav{
 	// display:none !important;
 	li {
 		font-weight:300!important;
 	}
+}
+#projects-nav{
+	display:none !important;
 }
 
 #hhero{
