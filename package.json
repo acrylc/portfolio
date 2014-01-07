@@ -1,0 +1,15 @@
+{
+  "name": "my-portfolio",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.*",
+    "ejs": "*",
+    "ejs-locals": "~1.0.2",
+    "node-compass": "~0.2.3",
+    "nodemon": "~1.0.1"
+  }
+}
