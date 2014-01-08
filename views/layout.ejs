@@ -9,20 +9,20 @@
    <body>
       <nav id='main-navbar'>
          <ul>
-            <a href='/projects'> <li> WORK +
+            <li> <a href='/projects'> WORK </a>  <span class='open'>+ </span>
 
                <ul id='projects-nav'>
                   <% for (var i=0;i<projects.projects_overview.length;i++) { %>
-                  <a href='/projects/<%=projects.projects_overview[i].url%>'> <li> <%= projects.projects_overview[i].name %></li></a> 
+                  <a href='/projects/<%=projects.projects_overview[i].url%>'> <li> <%= projects.projects_overview[i].name %></li>
                   <% } %> 
                </ul>
 
             </li> </a>
-            <a href='/play'> <li> PLAY -
+            <li>  <a href='/play'> PLAY </a>   <span class='open'>-</span>
 
                <ul id='play-nav'>
                   <% for (var i=0;i<projects.play_overview.length;i++) { %>
-                  <a href='/play/<%=projects.play_overview[i].url%>'> <li> <%= projects.play_overview[i].name %></li></a> 
+                  <a href='/play/<%=projects.play_overview[i].url%>'> <li> <%= projects.play_overview[i].name %></li>
                   <% } %> 
                </ul>
 
@@ -31,6 +31,12 @@
             <a href='/about'> <li> ABOUT </li> </a>
          </ul>
       </nav>
+
+      <script type='javascript'>
+
+      $('#open').on('click')
+
+      </script>
 
       <%- body %>
    </body>

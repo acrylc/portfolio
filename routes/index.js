@@ -13,7 +13,7 @@ exports.index = function(req, res){
 exports.projects = function(req, res){
 			projects = require('../models/projects');
 
-  res.render('projects', {'projects': projects});
+  res.render('projects', projects);
 };
 
 /*

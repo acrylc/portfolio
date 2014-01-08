@@ -1,9 +1,9 @@
 exports.projects_overview = [
 
-	{'name':'Rigby', 'url':'rigby'},
-	{'name':'ThingsJS', 'url':'things'},
-	{'name':'Lebanon Election Data', 'url':'lade'},
-	{'name':'Lamba Labs', 'url':'lamba'}
+	{'name':'Rigby', 'url':'rigby','img':'palette.png'},
+	{'name':'ThingsJS', 'url':'things', 'img':'things.png'},
+	{'name':'Lebanon Election Data', 'url':'lade', 'img':'lade.png'},
+	{'name':'Lamba Labs', 'url':'lamba', 'img':'workshop.jpg'}
 
 ];
 

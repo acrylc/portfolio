@@ -1,13 +1,23 @@
 
 <% layout('layout') -%>
-    <h1> Projects </h1>
+
 
     <ul id='projects-grid'>
-    	
-    	<li id='project'> ThingsJS	</li> 
-    	<li id='project'> Memory Shells </li> 
-    	<li id='project'> Lebanon Open Data Platfrom </li> 
-    	<li id='project'> Rigby </li> 
-    	<li id='project'> Lamba Labs </li> 
+	    	<h1> PROJECTS </h1>
+
+	    <% for(var i=0;i<projects_overview.length;i++){ %>
+
+	    	<a href = '/projects/<%=projects_overview[i].url%>'
+	    	<li class='project-li'>
+	    		<img src='/images/<%=projects_overview[i].img%>'>
+	    		<div class='overlay'>
+	    			
+	    			<div id='t'> <%=projects_overview[i].name%> </div>
+
+	    		</div>
+	    	</li>
+	    	</a>
+	    <% } %>
 
 	</ul>
+   
