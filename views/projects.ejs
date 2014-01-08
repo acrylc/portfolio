@@ -3,16 +3,22 @@
 
 
     <ul id='projects-grid'>
-	    	<h1> PROJECTS </h1>
+	    	<h1> <%=title%> </h1>
 
-	    <% for(var i=0;i<projects_overview.length;i++){ %>
+	    <% for(var i=0;i<projects_list.length;i++){ %>
 
-	    	<a href = '/projects/<%=projects_overview[i].url%>'
+	    	<% if (title == 'Projects') { %>
+	    	<a href = '/projects/<%=projects_list[i].url%>'>
+	    	<% } if ( title=='Play') { %>
+	    	<a href = '/play/<%=projects_list[i].url%>'>
+	    	<% } %>
 	    	<li class='project-li'>
-	    		<img src='/images/<%=projects_overview[i].img%>'>
+	    		<% if(projects_list[i].img != undefined ) { %>
+	    		<img src='/images/<%=projects_list[i].img%>'>
+	    		<% } %>
 	    		<div class='overlay'>
 	    			
-	    			<div id='t'> <%=projects_overview[i].name%> </div>
+	    			<div id='t'> <%=projects_list[i].name%> </div>
 
 	    		</div>
 	    	</li>

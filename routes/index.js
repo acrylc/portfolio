@@ -11,16 +11,16 @@ exports.index = function(req, res){
  * GET projects page.
  */
 exports.projects = function(req, res){
-			projects = require('../models/projects');
-
-  res.render('projects', projects);
+	projects = require('../models/projects');
+	res.render('projects', {'title':'Projects', 'projects_list':projects.projects_overview});
 };
 
 /*
  * GET play page.
  */
 exports.play = function(req, res){
-  res.render('play');
+	projects = require('../models/projects');
+	res.render('projects', {'title':'Play', 'projects_list':projects.play_overview});
 };
 
 /*
@@ -31,13 +31,10 @@ exports.about = function(req, res){
 };
 
 /*
- * GET about page.
+ * GET project page.
  */
 exports.project = function(req, res){
-		projects = require('../models/projects'),
-
-	console.log('IN EXPORTS PROJECTS');
-	console.log(projects.rigby);
+	projects = require('../models/projects');
 	if (req.params.id == 'rigby')
 		res.render('rigby',  projects.rigby);
 	if (req.params.id == 'things')
@@ -46,5 +43,12 @@ exports.project = function(req, res){
 		res.render('rigby',  projects.lamba);
 	if (req.params.id == 'lade')
 		res.render('rigby',  projects.lade);
-
+	if (req.params.id == 'picospaces')
+		res.render('rigby',  projects.picospaces);
+		if (req.params.id == 'grow')
+		res.render('rigby',  projects.grow);
 };
+
+/*
+ * GET play page.
+ */

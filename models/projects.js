@@ -3,14 +3,17 @@ exports.projects_overview = [
 	{'name':'Rigby', 'url':'rigby','img':'palette.png'},
 	{'name':'ThingsJS', 'url':'things', 'img':'things.png'},
 	{'name':'Lebanon Election Data', 'url':'lade', 'img':'lade.png'},
-	{'name':'Lamba Labs', 'url':'lamba', 'img':'workshop.jpg'}
+	{'name':'Lamba Labs', 'url':'lamba', 'img':'workshop.jpg'},
+	{'name':'Memory Shells', 'url':'memory'}, 
+	{'name':'Hayda Ra2yna', 'url':'haydara2yna'}
 
 ];
 
+
 exports.play_overview = [
 
-	{'name':'Grow', 'url':'rigby'},
-	{'name':'PicoSpaces', 'url':'things'},
+	{'name':'Grow', 'url':'grow'},
+	{'name':'PicoSpaces', 'url':'picospaces'},
 	{'name':'Hayda Ra2yna', 'url':'lade'},
 	{'name':'Whisker', 'url':'lamba'},	
 	{'name':'Flock', 'url':'rigby'},
@@ -99,3 +102,35 @@ exports.lamba = {
 	    ]
 }
 
+exports.picospaces = {
+	title : 'Pico Spaces',
+
+	tagline : 'Turn any surface into a touch screen with cheap, recycled material',
+
+	description : 'fasfa',
+
+	summary : {
+		date : '2011-2012',
+		awards : ['Murex Software Award', 'Deans Award for Creativity'],
+		team : ['Marc Farra', 'Mohammad Mehanna'], 
+		role : ['Computer Vision and GUI'],
+		methods : ['Computer Vision', 'GUI design'],
+		technology : ['OpenCV']
+	}, 
+	images : []
+}
+
+exports.grow = {
+	title : 'Grow',
+
+	tagline : 'An iPad magazine for the Urban, indoor gardener.',
+
+	description : 'fasfa',
+
+	summary : {
+		date : '2013',
+		methods : ['Competitive Analysis',' Visual Design', 'Critique'],
+		technology : ['Indesign']
+	}, 
+	images : []
+}

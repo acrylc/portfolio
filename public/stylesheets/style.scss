@@ -10,6 +10,7 @@ body, html {
   padding: 0px;
   margin: 0px;
   top:0px;
+  text-align:keft;
 }
 
 a {
@@ -38,7 +39,7 @@ p{
 	top: 25px;
 	left: 25px;
 	color:black;
-	background: rgba(245,245,240,0.9);
+	background: rgb(240,240,238);
 	padding: 10px;
 	font-size: 13px;
 
@@ -53,12 +54,12 @@ p{
 			color: black;
 			font-weight: 700;
 			padding: 5px;
-			display:inline-block;
+			// display:inline-block;
 		}
 	}
 }
 #projects-nav, #play-nav{
-	// display:none !important;
+	display:none !important;
 	a{		&:hover{
 			border-bottom: 3px solid rgb(90,90,90);
 		}
@@ -77,14 +78,24 @@ p{
 
 
 #hhero{
-	margin:130px 10% 130px 10%;
+	margin:0;
 	padding:0;
-	width:80%;
-	height:70%;
+	// margin:30px 30px 30px 30px;
+	width:800px;
+	height:100%;
 	background-color: black;
 	position: relative;
-	text-algin:center;
+	text-algin:left;
 	background-color: rgb(50,70,160);
+	background: white;
+	right:0;
+	float:right;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+
+	background-image: url('/public/rigby.png') ;
+
 }
 #tagline{
 	font-size:30px;
