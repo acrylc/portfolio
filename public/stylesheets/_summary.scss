@@ -1,6 +1,6 @@
 #summary{
 	position:relative;
-	border-top: 5px solid black;
+	// border-top: 5px solid black;
 	display:inline-block;
 	// padding: 5px 10px 10px 10px;
 	margin: 0;
@@ -23,7 +23,8 @@
 	}
 }
 #sub-sum{
-	padding: 0 0 0 15px ;
+	// padding: 0 0 0 15px ;
+	text-align:right;
 }
 
 #description{
@@ -41,26 +42,46 @@
 #text{
 	margin: 0;
 	padding:0;
-	position:absolute;
+	position:relative;
 	height:100%;
-	width: 40%;
+	width: 50%;
 	top:0px;
 
 }
 
 #text-inner{
-	position: absolute;
-	bottom:75px;
-	right:0px;
-	width: 65%;
+
+	margin:0 auto;
+	// margin-left: 100px;
+	margin-top:30%;
+	// margin-top:100px;
+	width: 350px;
+	height: 350px;
+	background-color: red;
 
 	h1{
-		font-size: 1.7em;
+		font-size: 5em;
+		line-height:0.8em;
+		font-family: Helvetica Neue;
+		font-weight:700;
+		padding:0;
+		margin:0;
+		letter-spacing: 2px;
+		// color: rgb(50,70,160);
 	}
 	h2{
-		font-size: 1.2em;
+		padding:0;
+		margin:25px 0 5px 0;
+		font-family:Baskerville;
+		font-size: 1em;
 		font-weight: 300;
+		width:100%;
+		text-align: justify;
+		// color: rgb(110,110,110);
+		color: rgb(50,70,160);
+
 	}
+	// border: 3px solid black;
 }
 
 #sec{
@@ -70,9 +91,8 @@
 	// padding:5px;
 }
 #sub-sec{
-	width:49%;
-	display: inline-block;
-	padding:0;
-	margin:0;
-	vertical-align: top
+	// display: inline-block;
+	margin:0 0 0 25px;
+	vertical-align: top;
+	float:right;
 }

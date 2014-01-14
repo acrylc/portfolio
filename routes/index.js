@@ -47,6 +47,8 @@ exports.project = function(req, res){
 		res.render('rigby',  projects.picospaces);
 		if (req.params.id == 'grow')
 		res.render('rigby',  projects.grow);
+		if (req.params.id == 'haydara2yna')
+		res.render('rigby',  projects.hayda);
 };
 
 /*

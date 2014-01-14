@@ -81,7 +81,7 @@ p{
 	margin:0;
 	padding:0;
 	// margin:30px 30px 30px 30px;
-	width:800px;
+	width:55%;
 	height:100%;
 	background-color: black;
 	position: relative;
@@ -93,8 +93,8 @@ p{
 	box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	-webkit-box-sizing:border-box;
-
 	background-image: url('/public/rigby.png') ;
+	overflow-y: scroll;
 
 }
 #tagline{
