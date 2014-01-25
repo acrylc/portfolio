@@ -1,10 +1,17 @@
 
 <% layout('layout') -%>
 
-<div id='hhero' >
-	<% for (var i=0;i<images.length;i++) {%>
-		<img id = 'img<%=i%>' src='/images/<%= images[i]%>' style=' height:auto;width:90%; margin:5%;padding:0px;'>
+<div id='hhero'  >
+		<div  class='square pix-img'>
+
+	<% for (var i=1;i<5;i++) {%>
+		<img id = 'img<%=i%>' class='pix-img2' src='/images/pixelateme/pix<%= i %>.jpg' style='width:100%;height:auto;padding:0;margin:0; display:none;position:absolute;top:0;left:0;'>
 	<%}%>
+	</div>
+	<img id = 'img<%=i+1%>' src ='/images/pixelateme/pixme1.jpg' style='height:auto;width:90%; margin:5%;padding:0px;'>
+	<img id = 'img<%=i+1%>' src ='/images/pixelateme/pixme2.jpg' style='height:auto;width:90%; margin:5%;padding:0px;'>
+
+
 </div>
 
 <div id='text'>
@@ -94,6 +101,20 @@
 
 <script>
 
+
+// Animate image gallery
+t = 0;
+$('#img1').css({'display':'block'});
+setInterval(function() {
+	$('.pix-img2').fadeOut();//css({'display':'none'});
+	$('#img'+(t+1)).fadeIn();//css({'display':'block'});
+		t = (t+1)%4;
+
+      // Do something every 2 seconds
+}, 1000);
+
+
+$('.square').css({'width': $('.square').height()});
 	// Get total number of captions
 	var captions = <%- JSON.stringify(captions) %>;
 
@@ -112,17 +133,3 @@
 		}
 	});
 </script>
-<!--
-	<div id='description'>
-	    <%= description %>
-	 </div>
-
-</div>
-
-<div id='images'>
-    <% for(var i=0; i<images.length; i++) {%>
-    <img src=' <%= images[i] %>'>
-<% } %>
-</div>
--->
-

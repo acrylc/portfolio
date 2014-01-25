@@ -1,6 +1,6 @@
 exports.projects_overview = [
 
-	{'name':'Rigby', 'url':'rigby','img':'palette.png'},
+	{'name':'Rigby', 'url':'rigby','img':'rigby/palette.png'},
 	{'name':'ThingsJS', 'url':'things', 'img':'things.png'},
 	{'name':'Lebanon Election Data', 'url':'lade', 'img':'lade.png'},
 	{'name':'Lamba Labs', 'url':'lamba', 'img':'workshop.jpg'},
@@ -16,11 +16,11 @@ exports.play_overview = [
 	{'name':'PicoSpaces', 'url':'picospaces'},
 	{'name':'Hayda Ra2yna', 'url':'lade'},
 	{'name':'Whisker', 'url':'lamba'},	
-	{'name':'Flock', 'url':'rigby'},
+	{'n-ame':'Flock', 'url':'flock'},
 	{'name':'TicTag', 'url':'things'},
-	{'name':'Nour', 'url':'lade'},
-	{'name':'Poster', 'url':'lamba'},
-	{'name':'Pixelate Me', 'url':'lamba'},
+	{'name':'Nour', 'url':'nour'},
+	{'name':'Poster', 'url':'avantgarde'},
+	{'name':'Pixelate Me', 'url':'pixelateme'},
 	{'name':'Generative Art Experiments', 'url':'lamba'}
 
 ];
@@ -40,7 +40,14 @@ exports.rigby = {
 	    },
 
 	    images : [
-	        '/images/rigby.png'
+	        'rigby/rigby_s3.png','rigby/rigby_s4.png','rigby/rigby_s5.png'
+	    ],
+
+	    captions : [
+		    {'index':1, 'txt': 'How do we bridge the gap between the number ... and the brisk color of the sea on a sunny Sunday morning? Rigby tries to create an alternate color picker that maintains the semantics and emotions inherent to colors.'},
+		    {'index':2, 'txt': 'In the browser, the most salient colors in an image are derived and displayed side by side with the image to create a color palette that maintains the emotions and semantics the user intended by association.'},
+		    {'index':3, 'txt': 'The user can select the number of colors in a palette and the format of colors. Colors are copied on click, or the palette can be downloaded.'},
+			{'index':4, 'txt ': 'The project was an experiment with the capabilities of front end applications and uses HTML5 technology. The File API is used to read the user\'s image file. The image is kept local where computer vision algorithms run in canvas are able to obtain salient colors. AI, css and sass files are generated locally with the color data to be downloaded.'}
 	    ]
 	}
 
@@ -61,7 +68,7 @@ exports.things = {
     },
 
     images : [
-        '/images/rigby.png'
+        'rigby.png'
     ]
 }
 
@@ -78,11 +85,20 @@ exports.lade = {
      summary : {
     	date : '2013',
     	methods : ['Web Design', 'Information Visualization'],
-    	technology : ['TileMill' , 'Mapbox', 'HTML5 & CSS']
+    	technology : ['TileMill' , 'Mapbox', 'LeafletJS', 'HTML5 & CSS'],
+	    clients : ['Democray International','http://democracyinternational.com/', 'Lebanese Association for Democratic Elections', 'http://www.lade.org.lb/?lang=en-US'],
+
     },
 
+
     images : [
-        '/images/rigby.png'
+       'lade1.png','lade-r1.png','lade-w1.png'
+    ], 
+
+    captions : [
+    	{ 'index' : 1, txt : 'Democracy International and LADE aim to promote transparency and accountability for governments. For this project, we cleaned and, hosted and visualized Electoral Data in Lebanon.'},
+    	{ 'index' : 2, txt : 'The first graph visualizes white ballots in Lebanon. The difficulty was visualized the information on a map with small districts becoming eligible for certain zoom levels. To maintain eligibility, I designed interactive markers based on zoom levels using LeafletJS. '},
+    	{ 'index' : 3, txt : 'The second graph visualizes voting power in Lebanon. The graph was compiled in Tilemill. Colors were selected to emphasize the wide range of spectrum of voting powers in Lebanon.'}
     ]
 }
 
@@ -99,7 +115,7 @@ exports.lamba = {
 	    },
 
 	    images : [
-	        '/images/rigby.png'
+	        'rigby.png'
 	    ]
 }
 
@@ -118,7 +134,9 @@ exports.picospaces = {
 		methods : ['Computer Vision', 'GUI design'],
 		technology : ['OpenCV']
 	}, 
-	images : []
+	images : [
+'pico-team2.jpg'
+	]
 }
 
 exports.grow = {
@@ -136,6 +154,28 @@ exports.grow = {
 	images : []
 }
 
+exports.nour = {
+	title : 'Nour',
+
+	tagline : 'The objective was to embed an LED matrix into a shirt to be used for visualizing graphical animations during social protests, as opposed to carrying static banners.',
+
+	description : 'fasfa',
+
+	summary : {
+		date : '2013',
+		methods : ['Physical Computing','Computer Vision'],
+		technology : ['Matlab', 'Arduino']
+	}, 
+	images : [
+		'nour1.jpg', 'nour2.jpg', 'nour3.jpg', 'nour4.jpg'
+	],
+
+	captions : [
+		{'index':1, 'txt': 'This project was a collaboration with a graphic designer, Nour Chammoun. The objective was to embed an LED matrix into a shirt to be used for visualizing graphical animations during social protests, as opposed to carrying static banners.'},
+		{'index':3, 'txt' : 'Nour\'s graphical animations are scanned and parsed in Matlab to create boolean arrays to control each LED in the matrix. We built a 256 LED matrix and hope to upgrade the shirt to a 1024 LED matrix to display for more detailed graphics.'}
+	]
+}
+
 exports.haydara2yna = {
 	title : 'Hayda Ra2yna',
 
@@ -150,3 +190,60 @@ exports.haydara2yna = {
 	}, 
 	images : []
 }
+
+exports.avantgarde = {
+	title : 'Avant Garde Poster',
+
+	tagline : 'An iPad magazine for the Urban, indoor gardener.',
+
+	description : 'fasfa',
+
+	summary : {
+		date : '2013',
+		methods : ['Visual Design', 'Sketching', 'Critique'],
+		technology : ['Indesign']
+	}, 
+	images : ['avposter5.png', 'avposter.jpg'],
+	captions: [
+		{'index':1, 'txt': 'This Avant Garde Poster was designed as an assignment for my Interaction Design class in Carnegie Mellon. The purpose was to display good information hierarchy in an information dense poster, while grabbing passerby attention and maintaining some visual association with the theme of Avant Garde Architecture.'}
+	]
+}
+
+exports.flock = {
+	title : 'Flock',
+
+	tagline : 'An iPad magazine for the Urban, indoor gardener.',
+
+	description : 'fasfa',
+
+	summary : {
+		date : '2013',
+		methods : ['Visual Design', 'Sketching', 'Critique'],
+		technology : ['Indesign']
+	}, 
+	images : ['flock/flocklogo.png', 'avposter.jpg','avposter.jpg'],
+	captions: [
+		{'index':1, 'txt': 'I’m at an event with hundred of attendees. Wouldn’t it be nice if I could see exactly who was at the event, and connect with people of similar interest? Every day, we pass by hundreds of people. So many missed opportunities for possible connections, collaborations and relationships.'},
+		{'index':2, 'txt': 'Flock is a physical linkldn. It connects like-minded people based on their current location and allows for dynamic location based chat sessions based on interest. '},
+		{'index':3, 'txt': 'We used the FourSquare API to get the current location of the user.  At a location, a user can create dynamic chat sessions with a subset of users based on their profile data (ex. interests, occupation).  Real time messaging was implemented using Firebase databases. The front end architecture was designed using Backbone and Sass for design. The app was implemented in HackNY in less than 14 hours.'}
+	]
+}
+
+exports.pixelateme = {
+	title : 'Pixelate Me',
+
+	tagline : 'Capturing data from random passerbys.',
+
+	description : 'fasfa',
+
+	summary : {
+		date : '2013',
+		methods : ['Visual Design', 'Sketching', 'Critique'],
+		technology : ['Indesign']
+	}, 
+	images : ['pixelateme/pix1.jpg', 'pixelateme/pix2.jpg','pixelateme/pix3.jpg'],
+	captions: [
+		{'index':1, 'txt': 'Pixelate Me is a simple digital installation that detects passerbys and projects a 3D pixelated image of them. The project was displayed in <b>TedX Beirut</b> social space and the opening of <b>Geek Express</b> to create a fun interactive digital environment for passerbys.'},
+	]
+}
+
