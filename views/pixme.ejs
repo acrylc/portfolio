@@ -34,78 +34,75 @@
 				</div>
 				<br>
 			</span>
-			
 
 			<span id='sec'>
+				<!-- DISPLAY METHOD -->
+				<% if (summary.methods != undefined ) { %>
+					<div id='sub-sec'>
+						<p id='label'> METHOD </p> 
+						<% for(var i=0;i<summary.methods.length;i++) { %>
+							 <p id='sub-sum'> <%=summary.methods[i]%> </p>
+						<% } %>
+					</div>
+				<% } %>
 
-			<!-- DISPLAY METHOD -->
-			<% if (summary.methods != undefined ) { %>
-				<div id='sub-sec'>
-					<p id='label'> METHOD </p> 
-					<% for(var i=0;i<summary.methods.length;i++) { %>
-						 <p id='sub-sum'> <%=summary.methods[i]%> </p>
-					<% } %>
-				</div>
-			<% } %>
+				<!-- DISPLAY TECHNOLOGY -->
+				<% if (summary.technology != undefined ) { %>
+					<div id='sub-sec'>
+						<p id='label'> TECHNOLOGY </p>
+						<% for(var i=0;i<summary.technology.length;i++) { %> 
+							 <p id='sub-sum'> <%=summary.technology[i]%> </p>
+						<% } %>
+					</div>
+				<% } %>
 
-			<!-- DISPLAY TECHNOLOGY -->
-			<% if (summary.technology != undefined ) { %>
-				<div id='sub-sec'>
-					<p id='label'> TECHNOLOGY </p>
-					<% for(var i=0;i<summary.technology.length;i++) { %> 
-						 <p id='sub-sum'> <%=summary.technology[i]%> </p>
-					<% } %>
-				</div>
-			<% } %>
-
-			<% if (summary.clients != undefined ) { %>
-				<div id='sub-sec'>
-					<p id='label'> CLIENT </p> 
-					<% for(var i=0;i<summary.clients.length;i+=2) { %>
-						 <p id='sub-sum' > <a href = <%=summary.clients[i+1]%> > <%=summary.clients[i]%> </a> </p>
-					<% } %>
-				</div>
-			<% } %>
-
-		</span>
-
-				<% if (summary.team != undefined || summary.awards != undefined ) { %>
-					<span id='sec'>
-						<% if (summary.team != undefined  ) { %>
-						<div id='sub-sec'>
-							<p id='label'> TEAM </p> 
-							<% for(var i=0;i<summary.team.length;i++) { %>
-								 <p id='sub-sum'> <%=summary.team[i]%> </p>
-							<% } %>
-							<p id='label'> ROLE  </p>
-								<span><%=summary.role%> </span>
-						</div>
-
-					<% } %>
-
-					<% if (summary.awards != undefined ) { %>
-						<div id='sub-sec'>
-							<p id='label'> AWARDS </p>
-							<% for(var i=0;i<summary.awards.length;i++) { %> 
-								 <p id='sub-sum'> <%=summary.awards[i]%> </p>
-							<% } %>
-						</div>
-					<%}%>
-					</span> 
-
+				<% if (summary.clients != undefined ) { %>
+					<div id='sub-sec'>
+						<p id='label'> CLIENT </p> 
+						<% for(var i=0;i<summary.clients.length;i+=2) { %>
+							 <p id='sub-sum' > <a href = <%=summary.clients[i+1]%> > <%=summary.clients[i]%> </a> </p>
+						<% } %>
+					</div>
 				<% } %>
 			</span>
+
+			<% if (summary.team != undefined || summary.awards != undefined ) { %>
+				<span id='sec'>
+					<% if (summary.team != undefined  ) { %>
+					<div id='sub-sec'>
+						<p id='label'> TEAM </p> 
+						<% for(var i=0;i<summary.team.length;i++) { %>
+							 <p id='sub-sum'> <%=summary.team[i]%> </p>
+						<% } %>
+						<p id='label'> ROLE  </p>
+							<span><%=summary.role%> </span>
+					</div>
+					<% } %>
+				</span>
+			<% } %>
+
+			<% if (summary.awards != undefined ) { %>
+				<span id='sec'>
+					<div id='sub-sec'>
+						<p id='label'> AWARDS </p>
+						<% for(var i=0;i<summary.awards.length;i++) { %> 
+							 <p id='sub-sum'> <%=summary.awards[i]%> </p>
+						<% } %>
+					</div>
+				</span> 
+			<%}%>
+
 		</div>
+			<div id='caption'> <%=captions[0].txt%> </div>
+
 	</div>
-	<div id='caption'> <%=captions[0].txt%> </div>
+
 
 </div>
 
 
 
 <script>
-
-
 // Animate image gallery
 t = 0;
 $('#img1').css({'display':'block'});

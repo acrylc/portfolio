@@ -106,10 +106,15 @@
 				<% } %>
 			</span>
 		</div>
+		<div id='caption'> 
+			<!-- <div class='caption-txt'>
+				
+			</div -->
+		</div>
+
 	</div>
 
 
-	<div id='caption'> <%=captions[0].txt%> </div>
 
 </div>
 
@@ -122,30 +127,57 @@
 
 	// On window scroll, if an image's top offset is into 1/2 the image
 	// Set #label to the corresponding caption
+	i = 1;
+	inc = +1;
 	$(window).scroll( function(){
 
-		for (var i=0;i<captions.length;i++){
+		// for (var i=0;i<captions.length;i++){
 			
 			var img = $('#img' + (captions[i].index-1) );
 			var txt = captions[i].txt;
+		 	// console.log(2*$(window).height()/4+$(window).scrollTop());
+		 	// console.log((img).offset().top);
+	 	if (inc > 0 ){
+		 	if ( (img).offset().top < 2*$(window).height()/4+$(window).scrollTop() ){
+				// animmate caption chage
+					animate_caption_change(txt);
 		 	
-		 	//console.log('checking '+i +' : offset: ' + (im).offset().top + " , height : " + (3*$(window).height()/4+$(window).scrollTop()) );
-		 	if ( (img).offset().top < 2*$(window).height()/4+$(window).scrollTop() )
-			$('#caption').html(txt);
+					console.log(i);
+			i+=inc;
+			if (i == (captions.length-1)||i == 0)
+				inc = inc*-1;
+		//	$('#caption').html(txt);
+		// }
+			}
+		}
+		else if (inc < 0 ){
+		 	if ( (img).offset().top > 2*$(window).height()/4+$(window).scrollTop() ){
+				// animmate caption chage
+					animate_caption_change(txt);
+		 	console.log(i);
+
+			i+=inc;
+			if (i == (captions.length-1)||i == 0)
+				inc = inc*-1;
+		//	$('#caption').html(txt);
+		// }
+			}
 		}
 	});
+
+	animate_caption_change = function (txt){
+			$('.caption-txt').fadeOut('200ms').animate({
+	            'top': '-50px'
+	            }, {duration: 'slow', queue: false}, function() {
+	            // Animation complete.
+	        	});
+		// $('#caption').html('');
+			newCaption = $(('<div class="caption-txt">'+txt+'</div>')).appendTo(('#caption'));
+	$(newCaption).fadeIn('slow').animate({
+	            'top': '00px'
+	            }, {duration: 'slow', queue: false}, function() {
+	            // Animation complete.
+	        	});
+	}
+
 </script>
-<!--
-	<div id='description'>
-	    <%= description %>
-	 </div>
-
-</div>
-
-<div id='images'>
-    <% for(var i=0; i<images.length; i++) {%>
-    <img src=' <%= images[i] %>'>
-<% } %>
-</div>
--->
-

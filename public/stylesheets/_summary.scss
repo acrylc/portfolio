@@ -7,6 +7,7 @@ src: url("/fonts/AC.otf") format("opentype");
 @import url(http://fonts.googleapis.com/css?family=Lato);
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,200);
 @import url(http://fonts.googleapis.com/css?family=Aleo);
+@import url(http://fonts.googleapis.com/css?family=Arvo);
 
 $font2 : 'Aleo';
 
@@ -31,6 +32,7 @@ $font2 : 'Aleo';
 		font-size: 12px;
 		text-align: left;
 		display: inline-block;
+		letter-spacing: 1px;
 
 	}
 }
@@ -58,7 +60,7 @@ $font2 : 'Aleo';
 	padding:0;
 	position:relative;
 	// height:100%;
-	width: 50%;
+	width: 45%;
 	top:0px;
 	position:fixed;
 	height:100%;
@@ -66,16 +68,10 @@ $font2 : 'Aleo';
 
 #text-inner{
 	margin:0 auto;
-	// margin-left: 100px;
-	// margin-top:20%;
-	// margin-top:100px;
-	width: 350px;
-	margin-top:120px;
-	// background-color: red;
-		// border-left: 2px solid black;
-		padding-left: 2px;
+	width: 50%;
+	margin-top:25%;
+	padding-left: 2px;
 
-		margin-left: 50px;
 	h1{
 
 		font-size: 2.5em;
@@ -92,15 +88,18 @@ $font2 : 'Aleo';
 		margin-bottom:20px;
 		font-stretch: 10px;
 		font-family: 'Abril Fatface';
+		 // text-transform: uppercase;
+		// text-align: center;
 	}
 	h2{
 		padding:0;
-		margin:0px 0 5px 0;
+		margin:5px 0 10px 0;
 		font-family:$font2;
-		font-size: 0.9em;
+		font-size: 0.91em;
 		font-weight: 300;
 		width:100%;
-		color: rgb(110,110,110);
+		color: gray;
+		// color: rgb(110,110,110);
 		color: black;
 
 	}
@@ -111,7 +110,7 @@ $font2 : 'Aleo';
 	// display:block;
 	// border-top: 2px solid black;
 	vertical-align:top;
-	margin-right: 30px;
+	margin-right: 20px;
 	margin-top:10px;
 	display:inline-block;
 	// padding:5px;
@@ -131,25 +130,31 @@ $font2 : 'Aleo';
 	position:relative;
 }
 #caption{
-	bottom:5%;
 	text-align:right;
-	width:405px;
-	position:absolute;
-	float:right;
-	right:0px;
-	margin-top:150px;
-	margin-right:80px;
-	border-top:15px solid rgb(240,240,238);
-	// border-bottom:5px solid rgb(240,240,238);
-	padding: 20px 0 20px 0;
+	width:100%;
+	position:relative;
+	border-top:8px solid black;
+	// border-bottom:5px solid black;
+	margin-top:20px;
+	padding: 30px 0 20px 0;
+	letter-spacing:0.5px;
+	line-height: 1.3em;
 	font-family: $font2;
-	font-weight:200;
-
-	font-size: 1.05em;
+	font-weight:300;
+	font-size: 0.91em;
 	color: black;
 		box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	-webkit-box-sizing:border-box;
+}
 
-
+.caption-txt{
+	position:absolute;
+	width:100%;
+	height:auto;
+	min-height:100px;
+	top:50px;
+	// left:50px;
+	display:none;
+	margin-top:30px;
 }
