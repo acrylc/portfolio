@@ -21,7 +21,7 @@
 		<h1> <%= title %> </h1>
 		<h2> <%= tagline %> </h2>
 
-		<div id='label'> <%=captions[0].txt%> </div>
+
 		<div id='summary'>
 
 
@@ -97,7 +97,11 @@
 			</span>
 		</div>
 	</div>
+	<div id='caption'> <%=captions[0].txt%> </div>
+
 </div>
+
+
 
 <script>
 
@@ -129,7 +133,7 @@ $('.square').css({'width': $('.square').height()});
 		 	
 		 	//console.log('checking '+i +' : offset: ' + (im).offset().top + " , height : " + (3*$(window).height()/4+$(window).scrollTop()) );
 		 	if ( (img).offset().top < 2*$(window).height()/4+$(window).scrollTop() )
-			$('#label').html(txt);
+			$('#caption').html(txt);
 		}
 	});
 </script>

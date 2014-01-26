@@ -3,10 +3,14 @@
 
 <div id='hhero' >
 	<% for (var i=0;i<images.length;i++) {%>
-		<img id = 'img<%=i%>' src='/images/<%= images[i]%>' style=' height:auto;width:90%; margin:5%;padding:0px;'>
+		<img id = 'img<%=i%>' class='square' src='/images/<%= images[i]%>' style=' border-radius:1px; height:auto; width:90%; margin:5%;padding:0px;'>
 	<%}%>
 </div>
 
+<!--
+		<div id='caption'> <%=captions[0].txt%> </div>
+
+-->
 <div id='text'>
 
 	<div id='text-inner'>
@@ -14,7 +18,6 @@
 		<h1> <%= title %> </h1>
 		<h2> <%= tagline %> </h2>
 
-		<div id='label'> <%=captions[0].txt%> </div>
 		<div id='summary'>
 
 
@@ -22,7 +25,7 @@
 			<span id='sec'>
 				<div id='sub-sec'>
 				<p id='label'> DATE  </p>
-				<span><%=summary.date%> </span>
+						 <p id='sub-sum'> <%=summary.date%> </p>
 				</span>
 				</div>
 				<br>
@@ -40,6 +43,9 @@
 					<% } %>
 				</div>
 			<% } %>
+			</span>
+
+						<span id='sec'>
 
 			<!-- DISPLAY TECHNOLOGY -->
 			<% if (summary.technology != undefined ) { %>
@@ -50,6 +56,9 @@
 					<% } %>
 				</div>
 			<% } %>
+			</span
+
+									<span id='sec'>
 
 			<% if (summary.clients != undefined ) { %>
 				<div id='sub-sec'>
@@ -61,6 +70,9 @@
 			<% } %>
 
 		</span>
+
+								<span id='sec'>
+
 
 				<% if (summary.team != undefined || summary.awards != undefined ) { %>
 					<span id='sec'>
@@ -76,6 +88,11 @@
 
 					<% } %>
 
+		</span>
+
+								<span id='sec'>
+
+
 					<% if (summary.awards != undefined ) { %>
 						<div id='sub-sec'>
 							<p id='label'> AWARDS </p>
@@ -90,7 +107,13 @@
 			</span>
 		</div>
 	</div>
+
+
+	<div id='caption'> <%=captions[0].txt%> </div>
+
 </div>
+
+
 
 <script>
 
@@ -108,7 +131,7 @@
 		 	
 		 	//console.log('checking '+i +' : offset: ' + (im).offset().top + " , height : " + (3*$(window).height()/4+$(window).scrollTop()) );
 		 	if ( (img).offset().top < 2*$(window).height()/4+$(window).scrollTop() )
-			$('#label').html(txt);
+			$('#caption').html(txt);
 		}
 	});
 </script>

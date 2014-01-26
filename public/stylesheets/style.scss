@@ -1,8 +1,11 @@
+$back : white;
+
 @import 'summary';
 @import 'toc';
 
 body, html {
   font: 18px Helvetica Neue, "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size:18px;
   font-weight: 300;
   width:100%;
   height:100%;
@@ -11,6 +14,7 @@ body, html {
   margin: 0px;
   top:0px;
   text-align:left;
+  background-color: $back;
 }
 
 a {
@@ -32,16 +36,19 @@ p{
 
 #main-navbar{
 	z-index: 100;
-	position: absolute;
+	position: fixed;
 	font: 15px Helvetica Neue;
 	font-weight:100;
 	text-align: left;
 	top: 25px;
-	left: 25px;
+	left: 50px;
 	color:black;
+	color:white;
 	background: rgb(240,240,238);
-	padding: 10px;
-	font-size: 13px;
+	// background: rgba(0,0,0,0.9);
+	padding: 5px;
+	font-size: 11px;
+
 
 	ul{
 		padding: 0;
@@ -53,8 +60,12 @@ p{
 			list-style-type: none;
 			color: black;
 			font-weight: 700;
+			font-weight:700;
+			// color:white !important;
 			padding: 5px;
-			// display:inline-block;
+			padding-left: 10px;
+			padding-right: 10px;
+			display:inline-block;
 		}
 	}
 }
@@ -86,8 +97,9 @@ p{
 	background-color: black;
 	position: relative;
 	text-algin:left;
-	background-color: rgb(50,70,160);
-	background: white;
+	// background-color: rgb(50,70,160);
+	// background: white;
+	background: $back;
 	right:0;
 	float:right;
 	box-sizing:border-box;

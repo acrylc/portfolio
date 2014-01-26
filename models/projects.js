@@ -29,7 +29,7 @@ exports.rigby = {
 
 	    title : 'Rigby',
 
-	    tagline : 'Off the top of your head, what does the color #5197a5 represent? How can we represent colors associated to a context?',
+	    tagline : 'Representing colors associated to context',
 
 		description : ' Rigby.io was built to answer the question of how to reliably share color palettes representing a certain environment. By juxtaposing an image dragged in by the user with its color palette, context is associated with the derived spectra. <br> The application was built using HTML5 APIs and underscore.js. Using the file API as well as building a custom machine vision algorithm allows for the color palette generation to be offloaded to the client for efficiency. ',
 	    
@@ -76,7 +76,7 @@ exports.things = {
 
 exports.lade = {
 
-    title : 'Lebanon Election Data Platform',
+    title : 'LebElect Platform',
 
     tagline : 'Visualizing election data for social impact.',
 
@@ -84,7 +84,7 @@ exports.lade = {
     
      summary : {
     	date : '2013',
-    	methods : ['Web Design', 'Information Visualization'],
+    	methods : ['Web Design', 'Information \<br> Visualization'],
     	technology : ['TileMill' , 'Mapbox', 'LeafletJS', 'HTML5 & CSS'],
 	    clients : ['Democray International','http://democracyinternational.com/', 'Lebanese Association for Democratic Elections', 'http://www.lade.org.lb/?lang=en-US'],
 
@@ -157,7 +157,7 @@ exports.grow = {
 exports.nour = {
 	title : 'Nour',
 
-	tagline : 'The objective was to embed an LED matrix into a shirt to be used for visualizing graphical animations during social protests, as opposed to carrying static banners.',
+	tagline : 'Wearable LED matrices for displaying graphics and realtime tweets in protests.',
 
 	description : 'fasfa',
 
