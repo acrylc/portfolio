@@ -1,29 +1,135 @@
 
 <% layout('layout') -%>
 
-
     <ul id='projects-grid'>
-	    	<h1> <%=title%> </h1>
+    	<!-- <h1> <%=title%> </h1> -->
 
-	    <% for(var i=0;i<projects_list.length;i++){ %>
 
-	    	<% if (title == 'Projects') { %>
-	    	<a href = '/projects/<%=projects_list[i].url%>'>
-	    	<% } if ( title=='Play') { %>
-	    	<a href = '/play/<%=projects_list[i].url%>'>
-	    	<% } %>
-	    	<li class='project-li'>
-	    		<% if(projects_list[i].img != undefined ) { %>
-	    		<img src='/images/<%=projects_list[i].img%>'>
-	    		<% } %>
-	    		<div class='overlay'>
-	    			
-	    			<div id='t'> <%=projects_list[i].name%> </div>
+    	<div id='projects_subcat'>
 
-	    		</div>
-	    	</li>
+    	<div id='p-label'>
+    		<h1>DATA<br>& DEV</h1>
+    		<h2>Data acquisition, semantics and visualizations</h2> 
+    	</div>
+
+    	<div id='projects_sublist'>
+
+    	<% widths = [44, 26.5,26.5,29,29,39,29,39,29,39,59,49,49]; %>
+    	<% for (var i=0;i<3;i++) { %>
+		<a class='p-li' href = '/projects/<%=projects_list[i].url%>' style='width: <%=widths[i]%>%'>
+
+		    	<li style='margin:0px;'>
+		    		<% if(projects_list[i].img != undefined ) { %>
+		    		<div id='img' style='background-image:url("/images/<%=projects_list[i].img%>")'></div>
+		    		<% } %>
+		    		<div class='overlay'>	
+		    			<div id='t'> <%=projects_list[i].name%> </div>
+		    		</div>
+		    	</li>
+
 	    	</a>
 	    <% } %>
+
+	    </div>
+
+    	<div id='projects_sublist'>
+
+    	<% for (var i=3;i<6;i++) { %>
+		<a class='p-li' href = '/projects/<%=projects_list[i].url%>' style='width: <%=widths[i]%>%'>
+
+		    	<li style='margin:0px;'>
+		    		<% if(projects_list[i].img != undefined ) { %>
+		    		<div id='img' style='background-image:url("/images/<%=projects_list[i].img%>")'></div>
+		    		<% } %>
+		    		<div class='overlay'>	
+		    			<div id='t'> <%=projects_list[i].name%> </div>
+		    		</div>
+		    	</li>
+
+	    	</a>
+	    <% } %>
+
+	    </div>
+
+
+	    </div>
+
+    	<div id='projects_subcat'>
+
+    	<div id='p-label'>
+    		<h1>ART &<br>DESIGN</h1>
+    		<h2>Data acquisition, semantics and visualizations</h2> 
+    	</div>
+
+    	<div id='projects_sublist'>
+
+    	<% for (var i=6;i<9;i++) { %>
+		<a class='p-li' href = '/projects/<%=projects_list[i].url%>' style='width: <%=widths[i]%>%'>
+
+		    	<li style='margin:0px;'>
+		    		<% if(projects_list[i].img != undefined ) { %>
+		    		<div id='img' style='background-image:url("/images/<%=projects_list[i].img%>")'></div>
+		    		<% } %>
+		    		<div class='overlay'>	
+		    			<div id='t'> <%=projects_list[i].name%> </div>
+		    		</div>
+		    	</li>
+
+	    	</a>
+	    <% } %>		
+	
+	    </div>
+
+
+    	<div id='projects_sublist'>
+
+    	<% for (var i=9;i<11;i++) { %>
+		<a class='p-li' href = '/projects/<%=projects_list[i].url%>' style='width: <%=widths[i]%>%'>
+
+		    	<li style='margin:0px;'>
+		    		<% if(projects_list[i].img != undefined ) { %>
+		    		<div id='img' style='background-image:url("/images/<%=projects_list[i].img%>")'></div>
+		    		<% } %>
+		    		<div class='overlay'>	
+		    			<div id='t'> <%=projects_list[i].name%> </div>
+		    		</div>
+		    	</li>
+
+	    	</a>
+	    <% } %>		
+	
+
+
+	    </div>
+
+<div id='projects_subcat'>
+
+    	<div id='p-label'>
+    		<h1>OPEN CULTURE</h1>
+    		<h2>Building platforms and communities around sharing</h2> 
+    	</div>
+
+    	<div id='projects_sublist'>
+
+
+    	<% for (var i=11;i<13;i++) { %>
+		<a class='p-li' href = '/projects/<%=projects_list[i].url%>' style='width: <%=widths[i]%>%'>
+
+		    	<li style='margin:0px;'>
+		    		<% if(projects_list[i].img != undefined ) { %>
+		    		<div id='img' style='background-image:url("/images/<%=projects_list[i].img%>")'></div>
+		    		<% } %>
+		    		<div class='overlay'>	
+		    			<div id='t'> <%=projects_list[i].name%> </div>
+		    		</div>
+		    	</li>
+
+	    	</a>
+	    <% } %>		
+	    		
+
+
+	    </div>
 
 	</ul>
    

@@ -1,0 +1,21 @@
+
+@font-face {
+font-family: Abril;
+src: url("/fonts/AC.otf") format("opentype");
+}
+@import url(http://fonts.googleapis.com/css?family=Abril+Fatface:100);
+@import url(http://fonts.googleapis.com/css?family=Hammersmith+One);
+@import url(http://fonts.googleapis.com/css?family=Lato);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,200);
+@import url(http://fonts.googleapis.com/css?family=Aleo);
+@import url(http://fonts.googleapis.com/css?family=Arvo);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+$font1 : 'Hammersmith One';
+$font2 : 'Abril Fatface';
+$font2 : 'Aleo';
+$font2 : 'Open Sans';
+$font2 : 'Raleway';
+
+@import "compass/css3/transition";
+

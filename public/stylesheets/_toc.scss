@@ -1,13 +1,81 @@
+$li_w : 250px;
+$li_m : 1px;
+@import url(http://fonts.googleapis.com/css?family=Abril+Fatface:100);
 
-.project-li{
-	width:20%;
-	height:300px;
+
+#projects_subcat{
+	width: 100%;
+	display:inline-block;
+	position:relative;
+	font-weight: 700;
+	font-size: 1.1em;
+
+	// border-top:5px solid rgb(200,200,205);
+	padding: 30px 0 30px 0;
+}
+
+#p-label {
+	display:inline-block;
+	max-width: 12%;
+	text-align:right;
+	vertical-align:top;
+	padding:0;
+	margin-right:3%;
+	float:left;
+	border-top:5px solid black;
+	padding-top:15px;
+
+	h1{
+	text-align:right;
+
+		padding:0;
+		margin:0px 0 5px 0;
+		font-size:1.4em;
+		color:black !important;
+		font-family: $font1;
+		line-height: 1.1em;
+	}
+	h2{
+			text-align:right;
+
+		padding:0;
+		margin:0;
+		font-size:0.8em;
+		line-height:1.1em;
+		font-weight: 400;
+		font-family: $font2;
+		color: rgb(190,190,200);
+	}
+}
+
+#projects_sublist{
+	display:inline-block;
+	width: 85%;
+	margin:0;
+	padding:0;
+	float:right;
+}
+
+
+.p-li{
+	padding:0;
+	width:32%;
+	height:205px;
 	display:inline-block;
 	position: relative;
-	margin:20px;
 	background: rgb(220,220,210);
+	margin:0;
+	padding:0;
+	float:left;
+	margin: 0 0.5% 1% 0.5%;
 
-	img, .overlay{
+	li{
+		width:100%;
+		height:100%;
+		margin:0;
+		padding:0;
+		list-style-type:none;
+		img,#img, .overlay{
 		position: absolute;
 		top:0px;
 		left:0px;
@@ -15,37 +83,46 @@
 		height:100%;
 		padding:0;
 		margin:0;
+		background-repeat:no-repeat;
+background-position:center; 
+		background-size: cover;
 	}
 	.overlay{
 		background: rgba(70,90,180,0.89);
 		background: rgba(250,250,245,0.89);
+		background:rgba(0,0,0,0.8);
 		color:black;
 		color: rgb(50,70,160) !important;
-		// border: 4px solid black;
-				opacity:0;
-				// top:-4px;
-				// left: -4px;
+		color:white;
+		@include transition(opacity 350ms ease-in);
+		opacity:0;
 		&:hover{
 			opacity:1;
 		}
 	}
 	#t{
-		color:black;
-		font-size:50px;
+		color:rgb(240,240,240);
+	font-size: 1.1em;
 		font: 'Helvetica Neue';
-		font-weight:300;
+	font-weight: 700;
 		padding: 30px;
 		margin:0;
 		top:0px;
 		position:absolute;
 
 	}
+	}
+
+	
 }
 
 #projects-grid{
-	margin-top:200px;
-	width:100%;
+	margin:0 auto;
+	padding:0;
+	width: 75%;
+	margin-top:125px;
 	h1{
 		color : rgb(50,70,160);
 	}
 }
+

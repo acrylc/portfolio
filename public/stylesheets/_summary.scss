@@ -1,15 +1,4 @@
 
-@font-face {
-font-family: Abril;
-src: url("/fonts/AC.otf") format("opentype");
-}
-@import url(http://fonts.googleapis.com/css?family=Abril+Fatface);
-@import url(http://fonts.googleapis.com/css?family=Lato);
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,200);
-@import url(http://fonts.googleapis.com/css?family=Aleo);
-
-$font2 : 'Aleo';
-
 #summary{
 	position:relative;
 	// border-top: 5px solid black;
@@ -58,7 +47,8 @@ $font2 : 'Aleo';
 	padding:0;
 	position:relative;
 	// height:100%;
-	width: 50%;
+	width: 40%;
+	text-align:right;
 	top:0px;
 	position:fixed;
 	height:100%;
@@ -70,14 +60,13 @@ $font2 : 'Aleo';
 	// margin-top:20%;
 	// margin-top:100px;
 	width: 350px;
-	margin-top:120px;
+	margin-top:45%;
 	// background-color: red;
-		// border-left: 2px solid black;
-		padding-left: 2px;
+	// border-left: 2px solid black;
+	padding-left: 2px;
+	// margin-left: 50px;
 
-		margin-left: 50px;
 	h1{
-
 		font-size: 2.5em;
 		line-height:0.8em;
 		font-family: Baskerville;
@@ -91,17 +80,22 @@ $font2 : 'Aleo';
 		color: black;
 		margin-bottom:20px;
 		font-stretch: 10px;
-		font-family: 'Abril Fatface';
+		font-family: $font1;
+		text-transform: uppercase;
+		text-align:center;
+		border-bottom: 7px solid black;
+		padding-bottom: 15px;
 	}
 	h2{
 		padding:0;
 		margin:0px 0 5px 0;
 		font-family:$font2;
 		font-size: 0.9em;
-		font-weight: 300;
+		font-weight: 400;
 		width:100%;
 		color: rgb(110,110,110);
 		color: black;
+		text-align: left;
 
 	}
 	// border: 3px solid black;
@@ -139,7 +133,7 @@ $font2 : 'Aleo';
 	right:0px;
 	margin-top:150px;
 	margin-right:80px;
-	border-top:15px solid rgb(240,240,238);
+	// border-top:15px solid rgb(240,240,238);
 	// border-bottom:5px solid rgb(240,240,238);
 	padding: 20px 0 20px 0;
 	font-family: $font2;
@@ -152,4 +146,23 @@ $font2 : 'Aleo';
 	-webkit-box-sizing:border-box;
 
 
+}
+
+.nav-li{
+	padding: 25px 10px 25px 10px;
+	font-size:0.8em;
+	cursor: pointer;
+	&:hover{
+		color:white !important;
+		i{ color:white; }
+		background-color:black;
+	}
+}
+
+.nav-li i {
+	color: black;
+	font-size:1.4em;
+	// padding: 5px;
+				// padding-left: 5px;
+			// padding-right: 5px;
 }

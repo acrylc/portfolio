@@ -1,11 +1,38 @@
 exports.projects_overview = [
 
-	{'name':'Rigby', 'url':'rigby','img':'rigby/palette.png'},
-	{'name':'ThingsJS', 'url':'things', 'img':'things.png'},
-	{'name':'Lebanon Election Data', 'url':'lade', 'img':'lade.png'},
-	{'name':'Lamba Labs', 'url':'lamba', 'img':'workshop.jpg'},
+	// Data extraction and semantics
+	{'name':'ThingsJS', 'url':'things', 'img':'icons/thingsjs.png'},
+	{'name':'Rigby', 'url':'rigby','img':'icons/rigby.png'},
+	{'name':'Lebanon Election Data', 'url':'lade', 'img':'icons/vp.png'},
+	{'name':'Flock', 'url':'flock', 'img': 'flock/flocklogo.png'},	
+	{'name':'Hayda Ra2yna', 'url':'haydara2yna', 'img':'icons/hr.png'},
 	{'name':'Memory Shells', 'url':'memory'}, 
-	{'name':'Hayda Ra2yna', 'url':'haydara2yna'}
+
+	{'name':'Poster', 'url':'avantgarde', 'img':'icons/poster.png'},
+	{'name':'Grow', 'url':'grow'},
+	{'name':'Nour', 'url':'nour', 'img':'icons/nour.jpg'},
+	{'name':'Pixelate Me', 'url':'pixelateme', 'img':'icons/pm.png'},
+	{'name':'Generative Art Experiments', 'url':'genart'},
+
+
+	// Open Data
+	{'name':'Lamba Labs', 'url':'lamba', 'img':'icons/lamba.png'},
+	{'name':'Open Data Platform', 'url':'lamba'},
+
+
+	// Visual and Interaction Design
+	{'name':'Grow', 'url':'grow'},
+	// {'name':'PicoSpaces', 'url':'picospaces'}, //
+
+	// APPS? 
+
+	// Hardware Hacking
+	{'name':'Pixelate Me', 'url':'pixelateme', 'img':'icons/pixme.jpg'},
+	// {'name':'Whisker', 'url':'lamba'},	
+
+	// Computational Art
+	{'name':'Generative Art Experiments', 'url':'lamba'}
+
 
 ];
 
@@ -13,11 +40,10 @@ exports.projects_overview = [
 exports.play_overview = [
 
 	{'name':'Grow', 'url':'grow'},
-	{'name':'PicoSpaces', 'url':'picospaces'},
+	{'name':'PicoSpaces', 'url':'picospaces'}, //
 	{'name':'Hayda Ra2yna', 'url':'lade'},
 	{'name':'Whisker', 'url':'lamba'},	
-	{'n-ame':'Flock', 'url':'flock'},
-	{'name':'TicTag', 'url':'things'},
+	{'name':'Flock', 'url':'flock'},//
 	{'name':'Nour', 'url':'nour'},
 	{'name':'Poster', 'url':'avantgarde'},
 	{'name':'Pixelate Me', 'url':'pixelateme'},
