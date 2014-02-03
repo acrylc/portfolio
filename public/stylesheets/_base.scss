@@ -1,4 +1,4 @@
-
+// fonts
 @font-face {
 font-family: Abril;
 src: url("/fonts/AC.otf") format("opentype");
@@ -18,4 +18,14 @@ $font2 : 'Open Sans';
 $font2 : 'Raleway';
 
 @import "compass/css3/transition";
+@import "compass/css3";
 
+$red: rgb(240,40,80);
+
+::selection {
+	background: $red; /* Safari */
+	color:white;
+	}
+::-moz-selection {
+	background: $red; /* Firefox */
+}
