@@ -1,14 +1,14 @@
 exports.projects_overview = [
 
 	// Data extraction and semantics
-	{'name':'ThingsJS', 'url':'things', 'img':'icons/thingsjs.png'},
-	{'name':'Rigby', 'url':'rigby','img':'icons/rigby.png'},
-	{'name':'Lebanon Election Data', 'url':'lade', 'img':'icons/vp.png'},
+	{'name':'ThingsJS', 'url':'things', 'img':'icons/sensors.png'},
+	{'name':'Rigby', 'url':'rigby','img':'icons/rigbyg.png'},
+	{'name':'Lebanon Election Data', 'url':'lade', 'img':'icons/mem2.png'},
 	{'name':'Flock', 'url':'flock', 'img': 'flock/flocklogo.png'},	
-	{'name':'Hayda Ra2yna', 'url':'haydara2yna', 'img':'icons/hr.png'},
-	{'name':'Memory Shells', 'url':'memory'}, 
+	{'name':'Hayda Ra2yna', 'url':'haydara2yna', 'img':'icons/lade.png'},
+	{'name':'Memory Shells', 'url':'memory', 'img':'icons/memg.png'}, 
 
-	{'name':'Poster', 'url':'avantgarde', 'img':'icons/poster.png'},
+	{'name':'Poster', 'url':'avantgarde', 'img':'icons/posterg.png'},
 	{'name':'Grow', 'url':'grow'},
 	{'name':'Nour', 'url':'nour', 'img':'icons/nour.jpg'},
 	{'name':'Pixelate Me', 'url':'pixelateme', 'img':'icons/pm.png'},
@@ -16,7 +16,7 @@ exports.projects_overview = [
 
 
 	// Open Data
-	{'name':'Lamba Labs', 'url':'lamba', 'img':'icons/lamba.png'},
+	{'name':'Lamba Labs', 'url':'lamba', 'img':'icons/lamba.jpg'},
 	{'name':'Open Data Platform', 'url':'lamba'},
 
 

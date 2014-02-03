@@ -1,8 +1,10 @@
 
 <% layout('layout') -%>
 
+	<h1 id='projects-title'> Experiments in<br>Data, Code and Design </h1>
+
+
     <ul id='projects-grid'>
-    	<!-- <h1> <%=title%> </h1> -->
 
 
     	<div id='projects_subcat'>
@@ -15,6 +17,7 @@
     	<div id='projects_sublist'>
 
     	<% widths = [44, 26.5,26.5,29,29,39,29,39,29,39,59,49,49]; %>
+    	<% for(var i=0;i<widths.length;i++) widths[i]-=1; %>
     	<% for (var i=0;i<3;i++) { %>
 		<a class='p-li' href = '/projects/<%=projects_list[i].url%>' style='width: <%=widths[i]%>%'>
 

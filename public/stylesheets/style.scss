@@ -18,6 +18,9 @@ body, html {
   text-align:left;
   background-color: $back;
   padding-bottom:50px !important;
+  // background: rgb(247,249,250);
+  // background-image: url("/images/subtle_dots.png");
+  background-repeat: repeat;
 }
 
 a {
@@ -40,17 +43,18 @@ p{
 #main-navbar{
 	z-index: 100;
 	position: fixed;
-	font: 15px Helvetica Neue;
+	font: 20px Helvetica Neue;
 	font-weight:100;
 	text-align: left;
 	top: 0;//25px;
 	left: 0;//50px;
 	color:black;
 	color:white;
-	background: rgba(255,255,255,0.90);
+	background: rgba(255,255,255,1);
+	// background: rgba(245,245,245,1);
 	// background: rgba(0,0,0,0.9);
 	width:100%;
-	font-size: 17px;
+	font-size: 15px;
 	text-align:right;
 	padding-right:50px;
 	@include box-sizing(border-box);
