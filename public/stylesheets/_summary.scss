@@ -141,7 +141,7 @@
 	color: black;
 	margin:0;
 	opacity:0;
-	top:50px !important;
+	// top:50px !important;
 }
 
 #text-content{
@@ -151,6 +151,12 @@
 	position:absolute;
 	top:0px;
 	left:0px;
-	top:50px !important;
+	// top:50px !important;
 
+}
+
+#p-caption{
+	width:85%;
+	padding: 10px 10% 10px 5%;
+	font-family: $font2;
 }

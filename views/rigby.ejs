@@ -4,8 +4,15 @@
 <div id='hhero' >
 		<img id = 'img0' class='square' src='/images/<%= images[0]%>' style=' border-radius:1px; height:95%; width:95%; margin:0% 5% 5% 0%;padding:0px;'>
 
+	<% j = 0; %>
 	<% for (var i=1;i<images.length;i++) {%>
-		<img id = 'img<%=i%>' class='square' src='/images/<%= images[i]%>' style=' border-radius:1px; height:auto; width:95%; margin:0% 5% 5% 0%;padding:0px;'>
+
+		<% if (captions[j].index == i) { %>
+			<p id='p-caption'> <%-captions[i].txt%> </p>
+			<% j+=1; %>
+		<% } %>
+
+		<img id = 'img<%=i%>' class='square' src='/images/<%= images[i]%>' style=' border-radius:1px; height:auto; width:95%; margin:5% 5% 5% 0%;padding:0px;'>
 	<%}%>
 </div>
 
@@ -107,13 +114,6 @@
 
 	</div>
 
-
-	<% for (var i=0;i<captions.length;i++) { %>
-	<div id='ti<%- (i+1) %>' class='ti caption'> 
-	<%-captions[i].txt%>
-	</div>
-	<% } %>
-
 	</div>
 
 </div>
@@ -123,66 +123,66 @@
 <script>
 
 	
-	// Get total number of captions
-	var captions = <%- JSON.stringify(captions) %>;
+	// // Get total number of captions
+	// var captions = <%- JSON.stringify(captions) %>;
 
-	// On window scroll, if an image's top offset is into 1/2 the image
-	// Set #label to the corresponding caption
-	inc = +1;
-	var imgPos = []
+	// // On window scroll, if an image's top offset is into 1/2 the image
+	// // Set #label to the corresponding caption
+	// inc = +1;
+	// var imgPos = []
 
-	var length = <%-captions.length %>
-	for (var t=0;t<length;t++){
-		imgPos[t] = 0;
-	}
-	$(window).scroll( function(){
+	// var length = <%-captions.length %>
+	// for (var t=0;t<length;t++){
+	// 	imgPos[t] = 0;
+	// }
+	// $(window).scroll( function(){
 
-		// for (var i=0;i<captions.length;i++){
+	// 	// for (var i=0;i<captions.length;i++){
 			
-			for (var i =0;i<length;i++){
-				var img = $( ('#img' + (captions[i].index) ) );
-				var txt = captions[i].txt;
-				console.log(img);
-		 		if ( $(img).offset().top < 2*$(window).height()/4+$(window).scrollTop() && imgPos[i]==0){ 
-					animate_caption_change(i);
-		 			imgPos[i]=1
-		 		}
-		 		 else if ( $(img).offset().top > 2*$(window).height()/4+$(window).scrollTop() && imgPos[i]==1){ 
-					animate_caption_change(i);
-		 			imgPos[i]=0
-		 		}
-		 		if ( $(img).offset().top < 2*$(window).height()/4+$(window).scrollTop() ){ 
-		 			imgPos[i]=1
+	// 		for (var i =0;i<length;i++){
+	// 			var img = $( ('#img' + (captions[i].index) ) );
+	// 			var txt = captions[i].txt;
+	// 			console.log(img);
+	// 	 		if ( $(img).offset().top < 2*$(window).height()/4+$(window).scrollTop() && imgPos[i]==0){ 
+	// 				animate_caption_change(i);
+	// 	 			imgPos[i]=1
+	// 	 		}
+	// 	 		 else if ( $(img).offset().top > 2*$(window).height()/4+$(window).scrollTop() && imgPos[i]==1){ 
+	// 				animate_caption_change(i);
+	// 	 			imgPos[i]=0
+	// 	 		}
+	// 	 		if ( $(img).offset().top < 2*$(window).height()/4+$(window).scrollTop() ){ 
+	// 	 			imgPos[i]=1
 
-		 		}
+	// 	 		}
 
-		if ( $(img).offset().top > 2*$(window).height()/4+$(window).scrollTop() ){ 
-		 			imgPos[i]=0
+	// 	if ( $(img).offset().top > 2*$(window).height()/4+$(window).scrollTop() ){ 
+	// 	 			imgPos[i]=0
 
-		 		}
+	// 	 		}
 
 			
-			}
+	// 		}
 		
-	});
+	// });
 
-	animate_caption_change = function (i){
-		$('.ti').css({'opacity':0});
-		$('#ti'+i).css({'opacity':1});
-	// 		$('.ti').fadeOut('200ms').animate({
-	//             'top': '-50px'
-	//             }, {duration: 'slow', queue: false}, function() {
-	//             // Animation complete.
-	//             this.css({'top':'50px'});
-	//         	});
-	// 	// $('#caption').html('');
-	// 		newCaption = $('#ti'+ (i) );
-	// $(newCaption).fadeIn('slow').animate({
-	//             'top': '00px'
-	//             }, {duration: 'slow', queue: false}, function() {
-	//             // Animation complete.
-	//         	});
-	}
+	// animate_caption_change = function (i){
+	// 	$('.ti').css({'opacity':0});
+	// 	$('#ti'+i).css({'opacity':1});
+	// // 		$('.ti').fadeOut('200ms').animate({
+	// //             'top': '-50px'
+	// //             }, {duration: 'slow', queue: false}, function() {
+	// //             // Animation complete.
+	// //             this.css({'top':'50px'});
+	// //         	});
+	// // 	// $('#caption').html('');
+	// // 		newCaption = $('#ti'+ (i) );
+	// // $(newCaption).fadeIn('slow').animate({
+	// //             'top': '00px'
+	// //             }, {duration: 'slow', queue: false}, function() {
+	// //             // Animation complete.
+	// //         	});
+	// }
 
 </script>
 

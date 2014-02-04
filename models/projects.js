@@ -66,14 +66,13 @@ exports.rigby = {
     },
 
     images : [
-        'rigby/rigby_s3.png','rigby/rigby_s4.png','rigby/rigby_s5.png','rigby/rigby_s5.png','rigby/rigby_s5.png'
+        'rigby/rigby_title.png','rigby/rigby_img.png', 'rigby/rigby_detail.png',
     ],
 
     captions : [
-	    {'index':1, 'txt': 'How do we bridge the gap between the number ... and the brisk color of the sea on a sunny Sunday morning? Rigby tries to create an alternate color picker that maintains the semantics and emotions inherent to colors.'},
-	    {'index':2, 'txt': 'In the browser, the most salient colors in an image are derived and displayed side by side with the image to create a color palette that maintains the emotions and semantics the user intended by association.'},
-	    {'index':3, 'txt': 'The user can select the number of colors in a palette and the format of colors. Colors are copied on click, or the palette can be downloaded.'},
-		{'index':4, 'txt': 'The project was an experiment with the capabilities of front end applications and uses HTML5 technology. The File API is used to read the user\'s image file. The image is kept local where computer vision algorithms run in canvas are able to obtain salient colors. AI, css and sass files are generated locally with the color data to be downloaded.'}
+	    {'index':1, 'txt': 'Traditional color pickers lack semantics. Rigby tries to bridge the gap between machine colors and the colors that we experience.'},
+	    {'index':2, 'txt': 'In the browser, the most salient colors are derived and displayed side by side with the target image to create a color palette that maintains the emotions and semantics the user intended by association.'},
+		{'index':3, 'txt': 'The user can select the number of colors in a palette and the format of colors. Colors are copied on click, or the palette can be downloaded to share.'}
     ]
 }
 
