@@ -17,6 +17,7 @@ var app = express();
 
 // all environments
 app.set('port', process.env.PORT || 3000);
+app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'views'));
 app.engine('ejs', engine);
 app.set('view engine', 'ejs');
@@ -28,7 +29,6 @@ app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
 app.use(compass({ cwd: __dirname + 'public' }));
-app.use(express.static(path.join(__dirname, 'public')));
 
 
 
@@ -46,4 +46,5 @@ app.get('/projects/:id',routes.project);
 app.get('/play/:id',routes.project);
 
 http.createServer(app).listen(app.get('port'), function(){
+	console.log("Listening on port: " + app.get("port"))
 });
