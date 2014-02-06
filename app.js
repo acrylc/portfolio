@@ -18,7 +18,8 @@ var express = require('express'),
 var app = express();
 
 // all environments
-app.set('port', process.env.PORT || 3000);
+var port = Number(process.env.PORT || 3000)
+app.set('port', port);
 app.set('views', path.join(process.env.PWD, 'views'));
 app.engine('ejs', engine);
 app.set('view engine', 'ejs');
