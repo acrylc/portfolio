@@ -1,4 +1,5 @@
 .DS_Store
 public/.sass-cache/
+.sass-cache
 node_modules
 images
