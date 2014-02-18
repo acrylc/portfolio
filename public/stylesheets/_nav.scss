@@ -1,0 +1,81 @@
+
+.nav-li{
+	padding: 30px 30px 30px 0px;
+	font-size:0.8em;
+	cursor: pointer;
+	font-family: "Futura LT";
+	font-weight: 300 !important;
+	color: black;
+	// @include transition(color 150 fade-in);
+	&:hover{
+		color:$red;
+	}
+}
+
+.nav-li.social{
+	padding: 30px 10px 30px 0px;
+	font-size:1.2em;
+
+}
+
+.nav-li i {
+		// @include transition(color 150 fade-in);
+
+	color: inherit;
+	font-size:inherit;
+	// padding: 5px;
+				// padding-left: 5px;
+			// padding-right: 5px;
+}
+
+#main-navbar{
+	z-index: 100;
+	position: fixed;
+	font: 20px Helvetica Neue;
+	font-weight:100;
+	text-align: left;
+	top: 0;//25px;
+	left: 0;//50px;
+	color:white;
+	background: rgba(255,255,255,1);
+	width:100%;
+	font-size: 15px;
+	text-align:right;
+	padding-right:50px;
+	@include box-sizing(border-box);
+    // background: rgb(250,250,255);
+	background-color: rgb(253,253,253);
+
+
+	ul{
+		padding: 0 50px 0 0 ;
+		margin:0;
+		display:inline-block;
+
+		li{
+			letter-spacing: 1px;
+			list-style-type: none;
+	font-weight: 700;
+			// color:white !important;
+
+			display:inline-block;
+		}
+	}
+}
+#projects-nav, #play-nav{
+	display:none !important;
+	a{		&:hover{
+			border-bottom: 3px solid rgb(90,90,90);
+		}
+}
+	li {
+		font-weight:300!important;
+	}
+}
+#play-nav{
+	display:none !important;
+}
+.open{
+	font-size: 20px;
+	padding: 0 5px 0 5px;
+}

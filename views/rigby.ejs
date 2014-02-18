@@ -1,79 +1,51 @@
 
 <% layout('layout') -%>
 
-<div id='hhero' >
-	<% for (var i=0;i<images.length;i++) {%>
-		<img id = 'img<%=i%>' class='square' src='/images/<%= images[i]%>' style=' border-radius:1px; height:auto; width:90%; margin:5%;padding:0px;'>
-	<%}%>
-</div>
 
-<!--
-		<div id='caption'> <%=captions[0].txt%> </div>
-
--->
 <div id='text'>
 
-	<div id='text-inner'>
-		
-		<h1> <%= title %> </h1>
-		<h2> <%= tagline %> </h2>
+	<div id='text-inner'>	
+		<h1 id='ltitle'> <%= title %> </h1>
+		<div id='text-content'>
+			<div class='ti' id='ti0'>
+				<h2> <%- tagline %> </h2>
+				<div id='ldate'> <%=summary.date%> </div>
+
 
 		<div id='summary'>
-
-
-		<!-- DISPLAY DATE -->
 			<span id='sec'>
-				<div id='sub-sec'>
-				<p id='label'> DATE  </p>
-						 <p id='sub-sum'> <%=summary.date%> </p>
-				</span>
-				</div>
-				<br>
+				<!-- DISPLAY METHOD -->
+				<% if (summary.methods != undefined ) { %>
+					<div id='sub-sec'>
+						<p id='label'> METHOD </p> 
+						<% for(var i=0;i<summary.methods.length;i++) { %>
+							 <p id='sub-sum'> <%=summary.methods[i]%> </p>
+						<% } %>
+					</div>
+				<% } %>
 			</span>
-			
-
 			<span id='sec'>
-
-			<!-- DISPLAY METHOD -->
-			<% if (summary.methods != undefined ) { %>
-				<div id='sub-sec'>
-					<p id='label'> METHOD </p> 
-					<% for(var i=0;i<summary.methods.length;i++) { %>
-						 <p id='sub-sum'> <%=summary.methods[i]%> </p>
-					<% } %>
-				</div>
-			<% } %>
+				<!-- DISPLAY TECHNOLOGY -->
+				<% if (summary.technology != undefined ) { %>
+					<div id='sub-sec'>
+						<p id='label'> TECHNOLOGY </p>
+						<% for(var i=0;i<summary.technology.length;i++) { %> 
+							 <p id='sub-sum'> <%=summary.technology[i]%> </p>
+						<% } %>
+					</div>
+				<% } %>
 			</span>
-
-						<span id='sec'>
-
-			<!-- DISPLAY TECHNOLOGY -->
-			<% if (summary.technology != undefined ) { %>
-				<div id='sub-sec'>
-					<p id='label'> TECHNOLOGY </p>
-					<% for(var i=0;i<summary.technology.length;i++) { %> 
-						 <p id='sub-sum'> <%=summary.technology[i]%> </p>
-					<% } %>
-				</div>
-			<% } %>
-			</span
-
-									<span id='sec'>
-
-			<% if (summary.clients != undefined ) { %>
-				<div id='sub-sec'>
-					<p id='label'> CLIENT </p> 
-					<% for(var i=0;i<summary.clients.length;i+=2) { %>
-						 <p id='sub-sum' > <a href = <%=summary.clients[i+1]%> > <%=summary.clients[i]%> </a> </p>
-					<% } %>
-				</div>
-			<% } %>
-
-		</span>
-
-								<span id='sec'>
-
-
+			<span id='sec'>
+				<% if (summary.clients != undefined ) { %>
+					<div id='sub-sec'>
+						<p id='label'> CLIENT </p> 
+						<% for(var i=0;i<summary.clients.length;i+=2) { %>
+							 <p id='sub-sum' > <a href = <%=summary.clients[i+1]%> > <%=summary.clients[i]%> </a> </p>
+						<% } %>
+					</div>
+				<% } %>
+			</span>
+			<span id='sec'>
 				<% if (summary.team != undefined || summary.awards != undefined ) { %>
 					<span id='sec'>
 						<% if (summary.team != undefined  ) { %>
@@ -85,99 +57,50 @@
 							<p id='label'> ROLE  </p>
 								<span><%=summary.role%> </span>
 						</div>
-
-					<% } %>
-
-		</span>
-
-								<span id='sec'>
-
-
-					<% if (summary.awards != undefined ) { %>
-						<div id='sub-sec'>
-							<p id='label'> AWARDS </p>
-							<% for(var i=0;i<summary.awards.length;i++) { %> 
-								 <p id='sub-sum'> <%=summary.awards[i]%> </p>
-							<% } %>
-						</div>
-					<%}%>
-					</span> 
-
 				<% } %>
 			</span>
-		</div>
-		<div id='caption'> 
-			<!-- <div class='caption-txt'>
-				
-			</div -->
-		</div>
+			<span id='sec'>
+				<% if (summary.awards != undefined ) { %>
+					<div id='sub-sec'>
+						<p id='label'> AWARDS </p>
+						<% for(var i=0;i<summary.awards.length;i++) { %> 
+							 <p id='sub-sum'> <%=summary.awards[i]%> </p>
+						<% } %>
+					</div>
+				<%}%>
+			</span> 
+				<% } %>
+<!-- 			</span>
+ -->	</div>
 
 	</div>
 
-
-
+</div>
+</div>
 </div>
 
 
+<div id='hhero' >
+	<div id='cover' class='square' style='background-image:url("/images/<%= images[0]%>")'>
+	</div>
+	<% j = 0; %>
+	<% if (captions[j].index == 1) { %>
+			<p id='p-caption'> <%-captions[j].txt%> </p>
+			<% j+=1; %>
+		<% } %>
+	<% for (var i=1;i<images.length;i++) {%>
+		<img id = 'pimg' src='/images/<%= images[i]%>' >
+		<% if (j<captions.length && captions[j].index == (i+1) ) { %>
+			<p id='p-caption'> <%-captions[j].txt%> </p>
+			<% j+=1; %>
+		<% } %>
+	<%}%>
+</div>
 
+</div>
 <script>
 
-	// Get total number of captions
-	var captions = <%- JSON.stringify(captions) %>;
-
-	// On window scroll, if an image's top offset is into 1/2 the image
-	// Set #label to the corresponding caption
-	i = 1;
-	inc = +1;
-	$(window).scroll( function(){
-
-		// for (var i=0;i<captions.length;i++){
-			
-			var img = $('#img' + (captions[i].index-1) );
-			var txt = captions[i].txt;
-		 	// console.log(2*$(window).height()/4+$(window).scrollTop());
-		 	// console.log((img).offset().top);
-	 	if (inc > 0 ){
-		 	if ( (img).offset().top < 2*$(window).height()/4+$(window).scrollTop() ){
-				// animmate caption chage
-					animate_caption_change(txt);
-		 	
-					console.log(i);
-			i+=inc;
-			if (i == (captions.length-1)||i == 0)
-				inc = inc*-1;
-		//	$('#caption').html(txt);
-		// }
-			}
-		}
-		else if (inc < 0 ){
-		 	if ( (img).offset().top > 2*$(window).height()/4+$(window).scrollTop() ){
-				// animmate caption chage
-					animate_caption_change(txt);
-		 	console.log(i);
-
-			i+=inc;
-			if (i == (captions.length-1)||i == 0)
-				inc = inc*-1;
-		//	$('#caption').html(txt);
-		// }
-			}
-		}
-	});
-
-	animate_caption_change = function (txt){
-			$('.caption-txt').fadeOut('200ms').animate({
-	            'top': '-50px'
-	            }, {duration: 'slow', queue: false}, function() {
-	            // Animation complete.
-	        	});
-		// $('#caption').html('');
-			newCaption = $(('<div class="caption-txt">'+txt+'</div>')).appendTo(('#caption'));
-	$(newCaption).fadeIn('slow').animate({
-	            'top': '00px'
-	            }, {duration: 'slow', queue: false}, function() {
-	            // Animation complete.
-	        	});
-	}
 
 </script>
+
+

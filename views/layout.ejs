@@ -4,48 +4,64 @@
    <head>
       <title>Maya Kreidieh</title>
       <link rel='stylesheet' href='/stylesheets/style.css' />
+      <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
    </head>
       
    <body>
       <script src = '/javascripts/jquery.js'></script>
 
+      <div id='screen'></div>
       <nav id='main-navbar'>
          <ul>
-            <li> <a href='/projects'> WORK </a>  
-<!--
-            <span class='open'>+ </span>
+            <a class='about' href='/' >
+               <li class='nav-li' > MAYA</li>
+            </a>
+            <a href="/projects">
+               <li class='nav-li' href='/projects'> PROJECTS</li>
+            </a>
+            <a href="/blog">
+               <li class='nav-li' href='/blog'> BLOG</li>
+            </a>
+            <a href="mailto:mayakreidieh@gmail.com">
+               <li class='nav-li social'> <i class="fa fa-envelope fa-x"></i> </li>
+            </a>
+            <a href="http://linkedin.com/in/mayakreidieh">
+               <li class='nav-li social'> <i class="fa fa-linkedin-square fa-x"></i> </li>
+            </a>
+            <a href="http://twitter.com/acrylc">
+               <li class='nav-li social'> <i class="fa fa-twitter fa-x"></i> </li>
+            </a>
+            <a href="http://github.com/acrylc">
+               <li class='nav-li social'> <i class="fa fa-github fa-x"></i> </li>
+            </a>
 
-               <ul id='projects-nav'>
-                  <% for (var i=0;i<projects.projects_overview.length;i++) { %>
-                  <a href='/projects/<%=projects.projects_overview[i].url%>'> <li> <%= projects.projects_overview[i].name %></li>
-                  <% } %> 
-               </ul>
--->
-            </li> </a>
-            <li>  <a href='/play'> PLAY </a>  
-            <!-- <span class='open'>-</span>
-
-               <ul id='play-nav'>
-                  <% for (var i=0;i<projects.play_overview.length;i++) { %>
-                  <a href='/play/<%=projects.play_overview[i].url%>'> <li> <%= projects.play_overview[i].name %></li>
-                  <% } %> 
-               </ul>
--->
-            </li> </a>
-            <li> BLOG </li>
-            <a href='/about'> <li> ABOUT </li> </a>
          </ul>
       </nav> 
 
       <script type='javascript'>
 
-         $('#open').on('click', function(){
+    // call /about
+    $('.about').on('click', function() {
+
+       $.get('/', function(data) {     
+
+           // fadeout content block and empty page content
+           $('#content').fadeOut(1000).empty();
+
+           // add data from /about to content and fadein
+           $('#content').html(data).fadeIn(1000);
+       });
+    });
+
             
-         });
 
       </script>
 
+      <div id='content'>
       <%- body %>
+      </div>
    </body>
 
 </html>
+

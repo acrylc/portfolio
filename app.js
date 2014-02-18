@@ -37,7 +37,7 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', routes.index);
+app.get('/', routes.about);
 app.get('/users', user.list);
 app.get('/projects',routes.projects);
 app.get('/play',routes.play);

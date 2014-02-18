@@ -1,0 +1,46 @@
+#about{
+	font-family: "Proxima Nova";
+	font-weight:100;
+	font-size:0.9em;
+	line-height: 1.6em;
+	letter-spacing: 1px;
+	width: 550px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:8%;
+	text-align:left;
+	margin-bottom: 20px;
+
+	p{
+		margin: 0.5em 0 0 0 ;
+		text-align:inherit;
+	}
+
+	@media screen and (max-width: 560px) {
+		width:80%;
+		// text-align:justify;
+	}
+}
+
+#hi{
+	font-weight: 700;
+	font-size:1.5em;
+	font-family: "Futura LT";
+}
+
+#contact {
+	text-align:center;
+	font-size: 1.5em;
+	padding:0;
+	margin:1em 0 0 0 ;
+
+	li{
+		list-style-type: none;
+		display:inline-block;
+		color: darken($red,10%);
+		padding: 0 0.2em 0 0.2em;
+		&:hover{
+			color:$red;
+		}
+	}
+}

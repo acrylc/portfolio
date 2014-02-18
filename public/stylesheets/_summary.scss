@@ -1,46 +1,63 @@
+@import url(http://fonts.googleapis.com/css?family=Didot);
 
-@font-face {
-font-family: Abril;
-src: url("/fonts/AC.otf") format("opentype");
+#ltitle{
+	font-size: 1.5em;
+	line-height:1.2em;
+	font-weight: 700;
+	padding:0;
+	margin:20px 0 5px 0;
+	letter-spacing: 7px;
+	color: black;
+	font-family: $font1;
+	text-transform: uppercase;
+	// color: darken($red,25%);
+
 }
-@import url(http://fonts.googleapis.com/css?family=Abril+Fatface);
-@import url(http://fonts.googleapis.com/css?family=Lato);
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,200);
-@import url(http://fonts.googleapis.com/css?family=Aleo);
-@import url(http://fonts.googleapis.com/css?family=Arvo);
 
-$font2 : 'Aleo';
+#ldate{
+	margin: 5px 0 25px 0;
+	font-family:'Didot';
+	font-size: 1em;
+	font-weight: 700;
+	color:rgb(190,190,200);
+	letter-spacing: 3px;
+	font-style: italic;
+	font-size:0.8em;
+	// text-align:center;
+	// display:none;
+}
 
 #summary{
 	position:relative;
-	// border-top: 5px solid black;
-	// display:inline-block;
-	// padding: 5px 10px 10px 10px;
 	margin: 0;
 	font-weight:100;
 	line-height:18px;
 	left:0px;
-	text-align:left;
 	font-size:14px;
 	bottom:0px;
-	text-align:left ;
-	// width: 820px;
+	text-align:left;
+	// display:none;
 
 	#label{
-		margin-top:3px;
+		margin:2px 0 0px 0;
+		font-family:'Futura LT';
 		font-weight: 700;
 		font-size: 12px;
-		text-align: left;
-		display: inline-block;
 		letter-spacing: 1px;
+		text-align:left;
+		display: inline-block;
+		color: black;
+		color:darken($red,10%);
+		display:block;
 
 	}
 }
 #sub-sum{
-	// padding: 0 0 0 15px ;
+	padding: 0 0 3px 10px ;
 	text-align:left;
-	letter-spacing:1px;
-	display:block;
+	letter-spacing:0px;
+	display:inline-block;
+	font-family:"Proxima Nova";
 }
 
 #description{
@@ -53,6 +70,9 @@ $font2 : 'Aleo';
 	text-align:left;
 	font: 20px  'Helvetica Neue' ;
 	font-weight:100;
+
+
+
 }
 
 #text{
@@ -60,68 +80,75 @@ $font2 : 'Aleo';
 	padding:0;
 	position:relative;
 	// height:100%;
-	width: 45%;
+	width: 27%;
+	margin-left:5%;
+	padding:0;
+	text-align:left;
+
 	top:0px;
 	position:fixed;
 	height:100%;
+	// margin-bottom: 50px;
+		@media screen and (max-width: 560px) {
+		width:90%;
+		position:relative;
+		// text-align:justify;
+	}
 }
 
 #text-inner{
 	margin:0 auto;
-	width: 50%;
-	margin-top:25%;
-	padding-left: 2px;
+	width: 70%;
+	margin-top:60px;
+	// border-top:3px solid black;
+	margin-right:25%;
+	padding: 5px 0 0 2px;
+	position: relative;
+	text-align:left;
 
-	h1{
-
-		font-size: 2.5em;
-		line-height:0.8em;
-		font-family: Baskerville;
-		font-weight: 900;
-		// font-family: Abril;
-		// font-family: 'Playfair Display';
-		// font-weight:900;
-		padding:0;
-		margin:0;
-		letter-spacing: 1px;
-		color: black;
-		margin-bottom:20px;
-		font-stretch: 10px;
-		font-family: 'Abril Fatface';
-		 // text-transform: uppercase;
-		// text-align: center;
-	}
 	h2{
-		padding:0;
-		margin:5px 0 10px 0;
-		font-family:$font2;
-		font-size: 0.91em;
-		font-weight: 300;
-		width:100%;
-		color: gray;
-		// color: rgb(110,110,110);
-		color: black;
+		padding:2px 0 15px 0;
+		margin:0px 0 5px 0;
+		font-family:'Futura LT';
+		font-size: 0.8em;
 
+		font-weight: 400;
+		letter-spacing: 1px;
+		width:100%;
+		color: rgb(110,110,110);
+		color: rgb(100,100,100);
+		color: black;
+		font-family: "Proxima nova"
+		// display: none;
+		// text-transform: uppercase;
 	}
-	// border: 3px solid black;
 }
+
+
 
 #sec{
 	// display:block;
 	// border-top: 2px solid black;
 	vertical-align:top;
-	margin-right: 20px;
-	margin-top:10px;
-	display:inline-block;
+	margin-top:1px;
+	display:block;
+
 	// padding:5px;
 	position:relative;
 	width:auto;
-	max-width:100px;
+	width:100%;
+	// text-align:left;
 }
 #sub-sec{
-	// display: inline-block;
+	display: block;
 	vertical-align: top;
 	float:left;
+	width:100%;
+	// text-align:left
+	border-top: 2px solid rgba(210,210,210,0.7);
+	padding:1px 0 1px 0;
+	font-size:0.9em;
+
 }
 
 .pix-img{
@@ -130,31 +157,145 @@ $font2 : 'Aleo';
 	position:relative;
 }
 #caption{
-	text-align:right;
+	text-align:left;
+
 	width:100%;
-	position:relative;
-	border-top:8px solid black;
-	// border-bottom:5px solid black;
-	margin-top:20px;
-	padding: 30px 0 20px 0;
-	letter-spacing:0.5px;
-	line-height: 1.3em;
+	padding: 0px 0 0px 0;
 	font-family: $font2;
-	font-weight:300;
-	font-size: 0.91em;
+	font-weight:200;
+	font-size: 1em;
 	color: black;
-		box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	-webkit-box-sizing:border-box;
+	margin:0;
+	opacity:0;
+	font-family: "Didot";
+	// top:50px !important;
 }
 
-.caption-txt{
-	position:absolute;
-	width:100%;
-	height:auto;
-	min-height:100px;
-	top:50px;
-	// left:50px;
-	display:none;
-	margin-top:30px;
+#text-content{
+	position:relative;
 }
+.ti{
+	position:absolute;
+	top:0px;
+	left:0px;
+	// top:50px !important;
+
+}
+
+#p-caption{
+	width:85%;
+	margin: 10px 10% 10px 5%;
+	padding: 0 20px 0 20px;
+	// font-family: $font2;
+	// font-family:"Didot";
+	font-family: "Proxima Nova";
+	font-weight:100;
+	font-size:0.90em;
+	line-height:1.2em;
+	color: rgb(20,20,25);
+	border-left: 5px solid $red;
+	// color: gray;
+	font-size:0.9em;
+	line-height: 1.5em;
+	letter-spacing: 1px;
+
+}
+
+
+#cover{
+	border-radius:1px; 
+	height:620px; 
+	width:100%; 
+	margin:0% 0% 0% 0%;
+	padding:0px;
+	position: relative;
+	// background-attachment: fixed;
+	background-size:cover;
+	background-position:center;
+		margin: 50px 0 50px 0;
+
+	img, .overlay{
+		padding:0;
+		margin:0;
+		top:0px;
+		left:0;
+		position:absolute;
+		width:100%;
+		height:100%;
+	}
+	.overlay{
+		opacity:0;
+		background-color: rgba(180,40,60,0.9);
+		h1{
+								margin-top: 30%;
+font-weight:400;
+			font-size: 4em;
+			font-family: 'Futura LT';
+			color: white;
+			text-align:center;
+			text-transform: uppercase;
+			letter-spacing: 13px;
+		}
+		#tsum{
+						margin:0 auto;
+
+					margin-top: 30%;
+
+			// background-color:white;
+			color:white;
+			font-size: 1.5em;
+			font-family: "Baskerville";
+			width: 70%;
+			padding: 20px 50px 50px 50px;
+		}
+	}
+}
+#pimg{
+	border-radius:1px; height:auto; width:100%; margin:5% 5% 5% 0%;padding:0px;
+	background-position: center;
+}
+
+
+#hhero{
+	margin:0;
+	padding:0;
+	padding-bottom:50px;
+	width:55%;
+	margin-right:9%;
+	height:100%;
+	background-color: black;
+	position: relative;
+	background: $back;
+	right:0;
+	float:right;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	background-image: url('/public/rigby.png') ;
+	position:relative;
+
+	@media screen and (max-width: 560px) {
+		width:90%;
+		position:relative;
+		margin: 0 auto;
+		// text-align:justify;
+	}
+
+}
+#tagline{
+	font-size:30px;
+	color:rgb(120,120,120);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
