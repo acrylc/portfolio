@@ -15,11 +15,11 @@ $li_m : 1px;
 	letter-spacing: 2px;
 	// font-family: 'Bodoni';
 	text-align:center;
+	
 		@media screen and (max-width: 560px) {
 		width:80%;
 		position:relative;
 			font-size: 1.7em;
-
 		// margin: 0 auto;
 		// text-align:justify;
 	}
@@ -60,11 +60,11 @@ $li_m : 1px;
 	}
 	h2{
 			text-align:right;
-
+display:none;
 		padding:0;
 		margin:0;
 		margin-top:10px;
-		font-size:0.70em;
+		font-size:0.60em;
 		line-height:1.2em;
 		font-family: 'Proxima Nova';
 		font-weight:100;

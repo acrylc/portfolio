@@ -14,14 +14,14 @@
       <div id='screen'></div>
       <nav id='main-navbar'>
          <ul>
-            <a class='about' href='/' >
+            <a class='about' href="/" >
                <li class='nav-li' > MAYA</li>
             </a>
             <a href="/projects">
                <li class='nav-li' href='/projects'> PROJECTS</li>
             </a>
-            <a href="/blog">
-               <li class='nav-li' href='/blog'> BLOG</li>
+            <a href='/pdf/resume.pdf'>
+               <li class='nav-li'> RESUME</li>
             </a>
             <a href="mailto:mayakreidieh@gmail.com">
                <li class='nav-li social'> <i class="fa fa-envelope fa-x"></i> </li>
@@ -41,18 +41,36 @@
 
       <script type='javascript'>
 
+    // // call /about
+    // $('.about').on('click', function() {
+
+    //    $.get('/', function(data) {     
+
+    //        // fadeout content block and empty page content
+    //        $('#content').fadeOut(1000).empty();
+
+    //        // add data from /about to content and fadein
+    //        $('#content').html(data).fadeIn(1000);
+    //    });
+    // });
+
+// add click handler to about-link
+$('.about').on('click', function() {
+console.log('clicked about')
     // call /about
-    $('.about').on('click', function() {
+            $('#content').fadeOut(500).delay(500).empty;
+setTimeout(function() {
+    $.get('/projects', function(data) {     
 
-       $.get('/', function(data) {     
+        // fadeout content block and empty page content
 
-           // fadeout content block and empty page content
-           $('#content').fadeOut(1000).empty();
+        // add data from /about to content and fadein
+        $('#content').html(data).fadeIn(2000);
 
-           // add data from /about to content and fadein
-           $('#content').html(data).fadeIn(1000);
-       });
     });
+}, 2000);
+
+});
 
             
 

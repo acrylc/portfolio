@@ -60,7 +60,7 @@ exports.rigby = {
 
     title : 'Rigby',
 
-    tagline : 'Associating colors with context. <a id="plink" href="http://rigby.io">(rigby.io)</a>',
+    tagline : 'Associating colors with context. (<a href="http://rigby.io" id="site">rigby.io</a>)',
 
 	description : ' Rigby.io was built to answer the question of how to reliably share color palettes representing a certain environment. By juxtaposing an image dragged in by the user with its color palette, context is associated with the derived spectra. <br> The application was built using HTML5 APIs and underscore.js. Using the file API as well as building a custom machine vision algorithm allows for the color palette generation to be offloaded to the client for efficiency. ',
     
@@ -100,9 +100,8 @@ exports.constellations = {
     ],
 
     captions : [
-	    {'index':1, 'txt': 'Traditional color pickers lack semantics. Rigby tries to bridge the gap between machine colors and the colors that we experience.'},
-	    {'index':2, 'txt': 'In the browser, the most salient colors are derived and displayed side by side with the target image to create a color palette that maintains the emotions and semantics the user intended by association.'},
-		{'index':3, 'txt': 'The user can select the number of colors in a palette and the format of colors. Colors are copied on click, or the palette can be downloaded to share.'}
+	    {'index':1, 'txt': 'This project was designed for the Interactive Art and Computational Design course at CMU, given by Prof. Golan Levin. The purpose was to map half a million points of hotel data. I was really interested in creating an interactive map in the browser, to see whether the browser could handle this amount of data. Hotel marker colors were set according to the rating, or stars, of a hotel.'},
+	    {'index':2, 'txt': 'The visualized data fascinated me in that it seemed to recreate geographical borders. Major touristic cities such Rome and Paris seem to light up.'}
     ]
 }
 
@@ -110,7 +109,7 @@ exports.syria = {
 
     title : 'Visualization of Syria',
 
-    tagline : 'Mapping half a million points in the browser. <a id="site" href="http://github.com/acrylc/syria-visualization">code</a>   |   <a id="site" href="http://acrylc.github.io/syria-visualization">site</a>',
+    tagline : 'Visualizing the interests of the authors of "Syrian Civil War" Wikipedia page. <a id="site" href="http://github.com/acrylc/syria-visualization">code</a>   |   <a id="site" href="http://acrylc.github.io/syria-visualization">site</a>',
 
 	description : ' Rigby.io was built to answer the question of how to reliably share color palettes representing a certain environment. By juxtaposing an image dragged in by the user with its color palette, context is associated with the derived spectra. <br> The application was built using HTML5 APIs and underscore.js. Using the file API as well as building a custom machine vision algorithm allows for the color palette generation to be offloaded to the client for efficiency. ',
     
@@ -121,13 +120,12 @@ exports.syria = {
     },
 
     images : [
-        'syria/1000titles.png','syria/1000titles.png',
+        'syria/cover.png','syria/1000titles.png',
     ],
 
     captions : [
-	    {'index':1, 'txt': 'Traditional color pickers lack semantics. Rigby tries to bridge the gap between machine colors and the colors that we experience.'},
-	    {'index':2, 'txt': 'In the browser, the most salient colors are derived and displayed side by side with the target image to create a color palette that maintains the emotions and semantics the user intended by association.'},
-		{'index':3, 'txt': 'The user can select the number of colors in a palette and the format of colors. Colors are copied on click, or the palette can be downloaded to share.'}
+	    {'index':1, 'txt': 'This project was designed for the Interactive Art and Computational Design course at CMU, given by Golan Levin. The purpose was to scrape and visualize data from an online source. Due to the controvery and frequent editing of the Syrian Civil War Wikipedia page, I was interested in visualizing the authors of this page. I was interested in seeing whether their interests could illuminate some patterns or key themese to the war.'},
+	    {'index':2, 'txt': 'When displaying 1000 points of interest, the browser could no longer handle an interactive visualization, but the output in my opinion was beautiful.'},
     ]
 }
 
@@ -137,14 +135,14 @@ exports.things = {
 
     title : 'ThingsJS',
 
-    tagline : 'Associating colors with context. ( <a id="site" href="http://rigby.io">rigby.io</a> )',
+    tagline : 'Building a toolking of web components for the Internet of Things.',
 
 	description : ' Rigby.io was built to answer the question of how to reliably share color palettes representing a certain environment. By juxtaposing an image dragged in by the user with its color palette, context is associated with the derived spectra. <br> The application was built using HTML5 APIs and underscore.js. Using the file API as well as building a custom machine vision algorithm allows for the color palette generation to be offloaded to the client for efficiency. ',
     
     summary : {
-    	date : '2013',
-    	methods : ['Web Development', 'Computer Vision'],
-    	technology : ['HTML5 File Api', 'Canvas', 'Backbone']
+    	date : '2014',
+    	methods : ['Web Development', 'Physical Computing', 'Networks'],
+    	technology : ['Polymer', 'Arduino', 'SocketIO']
     },
 
     images : [
@@ -191,12 +189,12 @@ exports.lade = {
 
     title : 'LebElect Platform',
 
-    tagline : 'Visualizing election data for social impact.',
+    tagline : 'Visualizing election data for social impact. <a href="http://github.com/acrylc/lebElectoralMaps" id="site"> code </a>| sites: <a href="http://ladeleb.github.io/platform/white_ballots.html" id="site">White Ballots Map</a> | <a href="http://ladeleb.github.io/platform/vote_power.html" id="site">Voter Power Map</a>',
 
 	description : 'Working with the Lebanese Association for Democratic Elections, this project aimed to visualize important datasets critical to election reform. <br> Three datasets were chosen by the organization: the number of white ballots per electoral district, the balance of parliamentary seats per districts and the voter registration trends per confession. Since the Lebanese parliament is ',
     
      summary : {
-    	date : '2013',
+    	date : '2014',
     	methods : ['Web Design', 'Information Visualization'],
     	technology : ['Mapbox', 'LeafletJS', 'HTML5 & CSS'],
 	    clients : ['Democray International','http://democracyinternational.com/', 'Lebanese Association for Democratic Elections', 'http://www.lade.org.lb/?lang=en-US'],
@@ -304,12 +302,12 @@ exports.nour = {
 exports.haydara2yna = {
 	title : 'Hayda Ra2yna',
 
-	tagline : 'Building a platform for public chatter around civic issues in Lebanon. (<a href="pnpn.pw" id="site">site</a>)',
+	tagline : 'Building a platform for public chatter around civic issues in Lebanon. <a href="https://github.com/acrylc/hayda-rayna" id="site">code</a> | <a href="http://pnpn.pw" id="site">site</a>',
 
 	description : 'fasfa',
 
 	summary : {
-		date : '2013',
+		date : '2014',
 		methods : ['Frontend',' Web Design'],
 		technology : ['TimelineJS', 'SASS', 'Backbone']
 	}, 

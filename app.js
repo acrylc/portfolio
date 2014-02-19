@@ -29,7 +29,7 @@ app.use(express.methodOverride());
 app.use(app.router);
 app.use(compass({ cwd: __dirname + 'public' }));
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use('/pdf', express.static(__dirname + '/pathToPDF'));
 
 
 // development only
