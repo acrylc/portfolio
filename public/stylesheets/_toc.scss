@@ -1,6 +1,5 @@
 $li_w : 250px;
 $li_m : 1px;
-@import url(http://fonts.googleapis.com/css?family=Abril+Fatface:100);
 
 #projects-title{
 	color:black;
@@ -15,7 +14,7 @@ $li_m : 1px;
 	letter-spacing: 2px;
 	// font-family: 'Bodoni';
 	text-align:center;
-	
+
 		@media screen and (max-width: 560px) {
 		width:80%;
 		position:relative;
@@ -109,6 +108,7 @@ display:none;
 	padding:0;
 	float:left;
 	margin: 0 1% 2% 1%;
+	cursor:pointer;
 
 	li{
 		width:100%;
@@ -138,7 +138,7 @@ display:none;
 			text-align:center;
 			&:hover{
 				background-color: rgba(0,0,0,0.8);
-				background-color: rgba(230,230,233,0.95);
+				background-color:rgba(230,230,233,0.95);// transparentize(darken($red,15%),0.1);//
 				// color:black;
 				opacity:1;
 								@include transition(opacity 250ms ease-in);
@@ -182,7 +182,7 @@ display:none;
 #projects-grid{
 	margin:0 auto;
 	padding:0;
-	width: 70%;
+	width: 80%;
 	margin-top:40px;
 	h1{
 		color : rgb(50,70,160);
@@ -202,6 +202,6 @@ display:none;
 	}
 }
 
-#open{
+.open{
 	width:97% !important;
 }

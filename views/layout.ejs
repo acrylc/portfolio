@@ -5,6 +5,8 @@
       <title>Maya Kreidieh</title>
       <link rel='stylesheet' href='/stylesheets/style.css' />
       <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+      <link rel="icon"  type="image/x-icon" href="/images/fav.png">
+      <link rel="shortcut icon"  type="image/png" href="/images/fav.png">
 
    </head>
       
@@ -13,73 +15,81 @@
 
       <div id='screen'></div>
       <nav id='main-navbar'>
+
          <ul>
-            <a class='about' href="/" >
+            <a class='in-nav' id='about' >
                <li class='nav-li' > MAYA</li>
             </a>
-            <a href="/projects">
+            <a class='in-nav' id='projects'>
                <li class='nav-li' href='/projects'> PROJECTS</li>
             </a>
-            <a href='/pdf/resume.pdf'>
+            <a class='in-nav' href='/pdf/resume.pdf'>
                <li class='nav-li'> RESUME</li>
             </a>
-            <a href="mailto:mayakreidieh@gmail.com">
+            <a class='in-nav' href="mailto:mayakreidieh@gmail.com">
                <li class='nav-li social'> <i class="fa fa-envelope fa-x"></i> </li>
             </a>
-            <a href="http://linkedin.com/in/mayakreidieh">
+          <!--   <a class='in-nav' href="http://linkedin.com/in/mayakreidieh">
                <li class='nav-li social'> <i class="fa fa-linkedin-square fa-x"></i> </li>
-            </a>
-            <a href="http://twitter.com/acrylc">
+            </a> -->
+            <a class='in-nav' href="http://twitter.com/acrylc">
                <li class='nav-li social'> <i class="fa fa-twitter fa-x"></i> </li>
             </a>
-            <a href="http://github.com/acrylc">
+            <a class='in-nav' href="http://github.com/acrylc">
                <li class='nav-li social'> <i class="fa fa-github fa-x"></i> </li>
             </a>
 
          </ul>
       </nav> 
 
-      <script type='javascript'>
-
-    // // call /about
-    // $('.about').on('click', function() {
-
-    //    $.get('/', function(data) {     
-
-    //        // fadeout content block and empty page content
-    //        $('#content').fadeOut(1000).empty();
-
-    //        // add data from /about to content and fadein
-    //        $('#content').html(data).fadeIn(1000);
-    //    });
-    // });
-
-// add click handler to about-link
-$('.about').on('click', function() {
-console.log('clicked about')
-    // call /about
-            $('#content').fadeOut(500).delay(500).empty;
-setTimeout(function() {
-    $.get('/projects', function(data) {     
-
-        // fadeout content block and empty page content
-
-        // add data from /about to content and fadein
-        $('#content').html(data).fadeIn(2000);
-
-    });
-}, 2000);
-
-});
-
-            
-
-      </script>
+ 
 
       <div id='content'>
-      <%- body %>
+
       </div>
+
+    <script type='text/javascript'>
+              
+    $( window ).load(function() {
+
+
+        var t = "<%- type %>"
+        // // add click handler to about-link
+        $('.in-nav').on('click', function() {
+            navTo = $(this)[0].id;
+            $('#content').fadeOut(50).delay(00).empty;
+            setTimeout(function() {
+                $.get('/'+navTo+'2', function(data) {     
+                    // fadeout content block and empty page content
+                    // add data from /about to content and fadein
+                    $('#content').html(data).fadeIn(310);
+                });
+            }, 50);
+        });
+        
+        if ( t!='project'){ 
+
+            $.get( '/'+t+'2', function(data) {     
+                $('#content').html(data).fadeIn(800);
+            });
+
+        }
+        
+        if ( t=='project'){ 
+            
+            var k = "<%- key %>"
+            $.get( '/projects2/'+k, function(data) {     
+                $('#content').html(data).fadeIn(800);
+            });
+        }
+
+        });
+      </script>
+
    </body>
+
+
+
 
 </html>
 

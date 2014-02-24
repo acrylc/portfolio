@@ -2,17 +2,52 @@ $break-small: 320px;
 $break-large: 1200px;
 // fonts
 @font-face {
-font-family: Abril;
-src: url("/fonts/AC.otf") format("opentype");
+font-family: Didot;
+src: url("/fonts/Didot.ttc");
 }
-// @import url(http://fonts.googleapis.com/css?family=Abril+Fatface:100);
-// @import url(http://fonts.googleapis.com/css?family=Hammersmith+One);
-// @import url(http://fonts.googleapis.com/css?family=Lato);
-// @import url(http://fonts.googleapis.com/css?family=Raleway:400,200);
-// @import url(http://fonts.googleapis.com/css?family=Aleo);
-// @import url(http://fonts.googleapis.com/css?family=Arvo);
-// @import url(http://fonts.googleapis.com/css?family=Open+Sans);
-// @import url(http://fonts.googleapis.com/css?family=Bodoni);
+
+@font-face {
+font-family: 'Proxima Nova';
+src: url("/fonts/proxima/ProximaNova-Light.otf");
+font-weight:100;
+}
+
+@font-face {
+font-family: 'Proxima Nova';
+src: url("/fonts/proxima/ProximaNova-Regular.otf");
+font-weight:300;
+}
+
+@font-face {
+font-family: 'Proxima Nova';
+src: url("/fonts/proxima/ProximaNova-Bold.otf");
+font-weight:700;
+}
+
+@font-face {
+font-family: 'Proxima Nova';
+src: url("/fonts/proxima/ProximaNova-Black.otf");
+font-weight:800;
+}
+
+@font-face {
+font-family: 'Futura LT';
+src: url("/fonts/futura/FuturaLT-Light.ttf");
+font-weight:100;
+}
+
+@font-face {
+font-family: 'Futura LT';
+src: url("/fonts/futura/FuturaLT.ttf");
+font-weight: 300;
+}
+
+
+@font-face {
+font-family: 'Futura LT';
+src: url("/fonts/futura/FuturaLT-Bold.ttf");
+font-weight: 700;
+}
 
 $font1 : 'Hammersmith One';
 $font1 : 'Futura LT';
@@ -45,5 +80,5 @@ $red: rgb(210,25,59);
 }
 
 #content{
-	// display:none;
+	display:none;
 }

@@ -1,7 +1,6 @@
 
-<% layout('layout') -%>
 
-	<h1 id='projects-title'> Experiments in<br>Data, Code and Design </h1>
+	<h1 id='projects-title'> Experiments in Data, Code and Design </h1>
 
 
     <ul id='projects-grid'>
@@ -20,7 +19,7 @@
     	<% widths = [32, 32, 32 ,32,32,32,32,32,32,32,32,99,99]; %>
     	<% for(var i=0;i<widths.length;i++) widths[i]-=1; %>
     	<% for (var i=0;i<3;i++) { %>
-		<a class='p-li' href = '/projects/<%=projects_list[i].url%>' >
+		<a class='p-li' id = '<%=projects_list[i].url%>' >
 
 		    	<li style='margin:0px;'>
 		    		<% if(projects_list[i].img != undefined ) { %>
@@ -40,7 +39,7 @@
     	<div id='projects_sublist'>
 
     	<% for (var i=3;i<6;i++) { %>
-		<a class='p-li' href = '/projects/<%=projects_list[i].url%>' >
+		<a class='p-li' id = '<%=projects_list[i].url%>' >
 
 		    	<li style='margin:0px;'>
 		    		<% if(projects_list[i].img != undefined ) { %>
@@ -60,7 +59,7 @@
     	<div id='projects_sublist'>
 
     	<% for (var i=12;i<14;i++) { %>
-		<a class='p-li' href = '/projects/<%=projects_list[i].url%>' >
+		<a class='p-li' id = '<%=projects_list[i].url%>' >
 
 		    	<li style='margin:0px;'>
 		    		<% if(projects_list[i].img != undefined ) { %>
@@ -87,7 +86,7 @@
     	<div id='projects_sublist'>
 
     	<% for (var i=6;i<9;i++) { %>
-		<a class='p-li' href = '/projects/<%=projects_list[i].url%>' >
+		<a class='p-li' id = '<%=projects_list[i].url%>' >
 
 		    	<li style='margin:0px;'>
 		    		<% if(projects_list[i].img != undefined ) { %>
@@ -118,7 +117,7 @@
 
 
     	<% for (var i=11;i<12;i++) { %>
-		<a class='p-li' id='open'  href = '/projects/<%=projects_list[i].url%>' >
+		<a class='p-li open'  id = '<%=projects_list[i].url%>' >
 
 		    	<li style='margin:0px;'>
 		    		<% if(projects_list[i].img != undefined ) { %>
@@ -138,3 +137,17 @@
 
 	</ul>
    
+   <script type='text/javascript'> window.history.pushState("object or string", "Title", "/projects"); 
+
+    		$('.p-li').on('click', function(){
+            navTo = $(this)[0].id;
+            $('#content').fadeOut(50).delay(00).empty();
+            setTimeout(function() {
+                $.get('/projects2/'+navTo, function(data) {     
+                    $('#content').html(data).fadeIn(310);
+                });
+            }, 50);
+
+    		})
+	</script>
+

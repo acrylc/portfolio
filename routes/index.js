@@ -10,9 +10,16 @@ exports.index = function(req, res){
 /*
  * GET projects page.
  */
+exports.projects2 = function(req, res, next){
+	projects = require('../models/projects');
+	req.url  = 'projects';
+	// next();
+	res.render('projects', {'title':'Projects', 'projects_list':projects.projects_overview});
+};
+
 exports.projects = function(req, res){
 	projects = require('../models/projects');
-	res.render('projects', {'title':'Projects', 'projects_list':projects.projects_overview});
+	res.render('layout', {'key':'', type:'projects'});
 };
 
 /*
@@ -27,23 +34,28 @@ exports.play = function(req, res){
  * GET about page.
  */
 exports.about = function(req, res){
-  res.render('about');
+  res.render('layout', {'key':'', type:'about'});
 };
+
+exports.about2 = function(req, res){
+  res.render('about', {'key':'', type:'about'});
+};
+
 
 /*
  * GET project page.
  */
 exports.project = function(req, res){
 	projects = require('../models/projects');
+	res.render('layout', {'key':req.params.id, 'type':'project'});
+	// for (var key in projects){
+	// 	console.log(key);
+	// 	if (key == req.params.id && key == 'pixelateme')
+	// 		res.render('pixme',  projects[key]);		
 
-	for (var key in projects){
-		console.log(key);
-		if (key == req.params.id && key == 'pixelateme')
-			res.render('pixme',  projects[key]);		
-
-		else if (key == req.params.id && key != 'pixelateme')
-			res.render('rigby',  projects[key]);		
-	}
+	// 	else if (key == req.params.id && key != 'pixelateme')
+	// 		res.render('rigby',  projects[key]);		
+	// }
 
 	// if (req.params.id == 'rigby')
 	// 	res.render('rigby',  projects.rigby);
@@ -62,6 +74,23 @@ exports.project = function(req, res){
 	// if (req.params.id == 'avantgarde')
 	// 	res.render('rigby',  projects.avantgarde);
 };
+
+exports.project2 = function(req, res){
+	projects = require('../models/projects');
+	// res.render('layout', {'key':key, type:'project'})
+	for (var key in projects){
+	// 	console.log(key);
+		if (key == req.params.id && key == 'pixelateme')
+			res.render('pixme',  projects[key]);		
+
+		else if (key == req.params.id && key != 'pixelateme'){
+			projects[key]['url'] = key;
+			res.render('project',  projects[key]);		
+		}
+	
+}
+};
+
 
 /*
  * GET play page.

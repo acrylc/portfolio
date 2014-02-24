@@ -91,7 +91,7 @@ exports.constellations = {
     
     summary : {
     	date : '2014',
-    	methods : ['Mapping', 'Web Development', 'Data Cleaning'],
+    	methods : ['Mapping', 'Web Development'],
     	technology : ['Tilemill', 'MapboxJS', 'AWK']
     },
 
@@ -100,8 +100,8 @@ exports.constellations = {
     ],
 
     captions : [
-	    {'index':1, 'txt': 'This project was designed for the Interactive Art and Computational Design course at CMU, given by Prof. Golan Levin. The purpose was to map half a million points of hotel data. I was really interested in creating an interactive map in the browser, to see whether the browser could handle this amount of data. Hotel marker colors were set according to the rating, or stars, of a hotel.'},
-	    {'index':2, 'txt': 'The visualized data fascinated me in that it seemed to recreate geographical borders. Major touristic cities such Rome and Paris seem to light up.'}
+	    {'index':1, 'txt': 'Hotels are gateways to a country’s culture. Usually located in the most fascinating places to explore, hotels bring together local and global communities. <br><br> To understand the distribution of hotels across the globe, I visualized Hotelbase\'s repository of hotels. In order to highlight the areas with the best hotels, I created a brightness gradient proportional to the amount of stars a hotel has. Predictably, hotels aggregate along coastlines as that’s where the most touristic areas are. <br><br> I was also interested in finding that the map seems to elucidate major cities. It’s fun to enumerate large cities like Paris, Rome, NYC just by looking at hotel data. In the USA in particular it’s curious to see large stretches of dark areas, but having the hotels illuminate the major roads between states. '},
+	  //  {'index':2, 'txt': 'I was also interested in finding that the map seems to elucidate major cities. It’s fun to enumerate large cities like Paris, Rome, NYC just by looking at hotel data. In the USA in particular it’s curious to see large stretches of dark areas, but having the hotels illuminate the major roads between states.  The visualized data fascinated me in that it seemed to recreate geographical borders. Major touristic cities such Rome and Paris seem to light up.'}
     ]
 }
 
@@ -115,7 +115,7 @@ exports.syria = {
     
     summary : {
     	date : '2014',
-    	methods : ['Data Visualization', 'Web Development', 'Data Cleaning'],
+    	methods : ['Data Visualization', 'Web Development'],
     	technology : ['D3.JS', 'MapboxJS', 'AWK']
     },
 
@@ -140,19 +140,17 @@ exports.things = {
 	description : ' Rigby.io was built to answer the question of how to reliably share color palettes representing a certain environment. By juxtaposing an image dragged in by the user with its color palette, context is associated with the derived spectra. <br> The application was built using HTML5 APIs and underscore.js. Using the file API as well as building a custom machine vision algorithm allows for the color palette generation to be offloaded to the client for efficiency. ',
     
     summary : {
-    	date : '2014',
+    	date : 'Current',
     	methods : ['Web Development', 'Physical Computing', 'Networks'],
     	technology : ['Polymer', 'Arduino', 'SocketIO']
     },
 
     images : [
-        'icons/sensors.png','rigby/rigby_img.png', 'rigby/rigby_detail.png',
+        'icons/sensors.png',
     ],
 
     captions : [
-	    {'index':1, 'txt': 'ThingsJS is a toolkit for the internet of things. You can connect a fitbit, an Arduino or potentially any internet connected object to a web app with a simple API.'},
-	    {'index':2, 'txt': 'You can write html tags such as <led pin="6"></led> and it would connect that DOM object to the arduino pin. The tag also has properties such as .value and .onValueChanged that can be accessed through Javascript.'},
-		{'index':3, 'txt': 'On the arduino, you simply need to upload the thingsJS script that communicates with the server. The server is written in NodeJS and Socket.IO. The HTML API uses Google’s polymer-project to write custom HTML tags.'}
+	    {'index':1, 'txt': 'ThingsJS is a toolkit for the internet of things. You can connect a fitbit, an Arduino or potentially any internet connected object to a web app with a simple API. You can write html tags such as <led pin="6"></led> and it would connect that DOM object to the arduino pin. The tag also has properties such as .value and .onValueChanged that can be accessed through Javascript. On the arduino, you simply need to upload the thingsJS script that communicates with the server. The server is written in NodeJS and Socket.IO. The HTML API uses Google’s polymer-project to write custom HTML tags.'}
     ]
 }
 
@@ -197,19 +195,19 @@ exports.lade = {
     	date : '2014',
     	methods : ['Web Design', 'Information Visualization'],
     	technology : ['Mapbox', 'LeafletJS', 'HTML5 & CSS'],
-	    clients : ['Democray International','http://democracyinternational.com/', 'Lebanese Association for Democratic Elections', 'http://www.lade.org.lb/?lang=en-US'],
+	    // clients : ['Democray International','http://democracyinternational.com/', 'Lebanese Association for Democratic Elections', 'http://www.lade.org.lb/?lang=en-US'],
 
     },
 
 
     images : [
-       'voter-power2.jpg','lade-w1.png','lade-r1.png'
+       'voter-power2.jpg', 'vp-sour.png', 'vp-keserouan.png', 'lade-w1.png'
     ], 
 
     captions : [
-    	{ 'index' : 1, txt : 'Democracy International and LADE aim to promote transparency and accountability for governments. For this project, we cleaned, hosted and visualized Electoral Data in Lebanon.'},
-    	{ 'index' : 2, txt : 'The first graph visualizes white ballots in Lebanon. The difficulty was visualizing the information on a map with small districts becoming eligible for certain zoom levels. To maintain eligibility, I designed interactive markers based on zoom levels using LeafletJS. '},
-    	{ 'index' : 3, txt : 'The second graph visualizes voting power in Lebanon. The graph was compiled in Tilemill. Colors were selected to emphasize the wide range of spectrum of voting powers in Lebanon.'}
+    	{ 'index' : 1, txt : 'Lebanon is an interesting country to get data from to visualize it. Not only is it the only country with democratic representation based on religion, it has abysmal governmental record keeping because religious balance is a sensitive political issue. <br> <br> Lebanon is divided into 26 administrative districts. I was interested in visualizing the electoral influence of each district by studying the total registered voters in proportion to their representation in the parliament. The final visualization reveals surprisingly severe discrepancies.'},
+    	{ 'index' : 3, txt : 'For example, residents in the Keserwan district hold nearly 5% of the seats in the parliament and only constitute around 3% of the total registered voters. Meanwhile, voters in Sour hold 3% of parliamentary seats but constitute around 5% of the voters. This shows that a voter in Kesrouan has the voting power of two Sour residents. <br><br> The constitution states that christians and muslims have equal number of seats: Kesrouan is a primarily christian area, while Sour is muslim. Due to a constitution that is explicitly sectarian, parliamentary seat distributions across districts create inequality.'},
+   		{'index' : 4, 'txt' : 'Another provocative visualization is the increase in the importance of white ballot votes in Lebanon. White ballots are interesting because they represent the desire of citizens to use their democratic power to display their refusal of the current regime. <br> <br> Until 2009, white ballots were ignored and considered invalid votes! By noticing that the amount of ‘invalid + white’ votes doubled from 2005 to 2009, we can surmise that there was an increase in the amount of white ballots at the polls. <br> <br>Looking at specific districts reveals a few things. While they aren’t the most densely populated areas, there is a higher concentration of white ballots in Beirut (the capital) and Southern Lebanon. This might be explained by the fact that Shiites live in those areas, and feel unappreciative of the current political distribution of power. <br><br>I chose to display full numbers rather than population percentages because I wanted to emphasize that the magnitude of these votes. In Beirut, there are 3000 people that chose to wake up one Sunday morning and stand in line for hours just to exercise their democratic right to submit a white ballot and make a statement.'}
     ]
 }
 

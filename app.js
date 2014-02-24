@@ -38,11 +38,14 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.about);
+app.get('/about2', routes.about2);
 app.get('/users', user.list);
 app.get('/projects',routes.projects);
+app.get('/projects2',routes.projects2);
 app.get('/play',routes.play);
 app.get('/about',routes.about);
 app.get('/projects/:id',routes.project);
+app.get('/projects2/:id',routes.project2);
 app.get('/play/:id',routes.project);
 
 http.createServer(app).listen(app.get('port'), function(){

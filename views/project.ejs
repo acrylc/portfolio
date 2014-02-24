@@ -1,12 +1,16 @@
 
 
-<div id='text'>
+<div id='proj-content'>
 
-	<div id='text-inner'>	
-		<h1 id='ltitle'> <%= title %> </h1>
-		<div id='text-content'>
-			<div class='ti' id='ti0'>
-				<h2> <%- tagline %> </h2>
+
+	<div id='proj-sec'> 
+
+		<div id='side-img'>
+			<img src='/images/<%= images[0]%>'>
+		</div>
+
+		<div id='proj-caption'>
+					<div id='proj-title'> <%= title %> </div>
 				<div id='ldate'> <%=summary.date%> </div>
 
 
@@ -68,36 +72,60 @@
 				<%}%>
 			</span> 
 				<% } %>
-<!-- 			</span>
- -->	</div>
+	</div>
+
+
+			<div id='proj-cap'>
+				<% for (i=0;i<captions.length;i++) { %>
+				<div class='cap hide' id='cap<%-i%>'> <%-captions[i].txt%> </div>
+				<% } %>
+			</div>
+
+
+		</div>
 
 	</div>
 
-</div>
-</div>
-</div>
+		<% for (i=1;i<images.length;i++) { %>
+			<div id='proj-sec'> 
+
+			<div id='side-img'>
+				<img src='/images/<%= images[i]%>'>
+			</div>
+			<div id='proj-caption'>
+				<div id='proj-cap'>
+				</div>
+			</div>
+
+			</div>
+		<% } %>
 
 
-<div id='hhero' >
-	<div id='cover' class='square' style='background-image:url("/images/<%= images[0]%>")'>
 	</div>
-	<% j = 0; %>
-	<% if (captions[j].index == 1) { %>
-			<p id='p-caption'> <%-captions[j].txt%> </p>
-			<% j+=1; %>
-		<% } %>
-	<% for (var i=1;i<images.length;i++) {%>
-		<img id = 'pimg' src='/images/<%= images[i]%>' >
-		<% if (j<captions.length && captions[j].index == (i+1) ) { %>
-			<p id='p-caption'> <%-captions[j].txt%> </p>
-			<% j+=1; %>
-		<% } %>
-	<%}%>
-</div>
-
-</div>
-
-<script type='text/javascript'> window.history.pushState("object or string", "Title", "/projects/<%= url%>"); 
 
 
 
+
+<script type='text/javascript'> 
+
+	window.history.pushState("object or string", "Title", "/projects/<%= url%>"); 
+	
+	// wait 250ms then 
+    setTimeout(function() {
+	    	$('#cap0').addClass('in');
+	}, 250);
+
+	$(window).scroll(function(){
+		// console.log('scrooll');
+		t = false
+		if ( ($(window).scrollTop()-$(window).height()/2  >= $( $('img')[0] ).offset().top ) && t==false){
+			$('#cap0').addClass('out');$('#cap1').addClass('in');
+			t=true;
+		}
+
+
+	});
+		
+
+
+</script>
